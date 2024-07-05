@@ -1,0 +1,3 @@
+C:/Users/ariel/Desktop/GIT/ChatRoomServer/ChatRoom/CMakeFiles/..dir
+C:/Users/ariel/Desktop/GIT/ChatRoomServer/ChatRoom/CMakeFiles/ALL_BUILD.dir
+C:/Users/ariel/Desktop/GIT/ChatRoomServer/ChatRoom/CMakeFiles/ZERO_CHECK.dir

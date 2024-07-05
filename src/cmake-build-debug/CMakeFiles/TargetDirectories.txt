@@ -1,0 +1,3 @@
+/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles/..dir
+/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles/edit_cache.dir
+/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles/rebuild_cache.dir
