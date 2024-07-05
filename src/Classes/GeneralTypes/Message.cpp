@@ -6,15 +6,20 @@ using std::move;
 namespace GeneralTypes{
     class Message {
     public:
+
         //region Properties
+        /**
+         * Logical identifier of a Message object.
+         */
+        unsigned long ID;
         /**
          * Logical identifier of message sender.
          */
-        long ClientID;
+        unsigned long ClientID;
         /**
          * Logical identifier of recipient chat room.
          */
-        long TargetChatRoomID;
+        unsigned long TargetChatRoomID;
         /**
          * Message contents.
          */
@@ -25,14 +30,19 @@ namespace GeneralTypes{
         /**
          * Create an empty Message object.
          */
-        Message() : ClientID(0), TargetChatRoomID(0), Contents("") {}
+        Message() : ClientID(-1), TargetChatRoomID(-1), Contents("Null Message") {}
         /**
          * Create a Message object.
          * @param ClientID Logical identifier of message sender.
          * @param TargetChatRoomID Logical identifier of recipient chat room.
          * @param Contents Message contents.
          */
-        Message(long ClientID,long TargetChatRoomID,string Contents) :  ClientID(ClientID), TargetChatRoomID(TargetChatRoomID), Contents(move(Contents)) {}
+        Message(long ClientID,long TargetChatRoomID,string Contents) : ID(count++), ClientID(ClientID), TargetChatRoomID(TargetChatRoomID), Contents(move(Contents)) {}
         //endregion
+    private:
+        /**
+         * Stores number of created messages. Used to assign IDs.
+         */
+        static int count;
     };
 }
