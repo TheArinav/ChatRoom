@@ -8,13 +8,16 @@
 
 #include <string>
 
-typedef std::string string;
+using std::string;
+
 namespace GeneralTypes {
-    class Messege {
+    class Message {
     public:
         long ClientID;
         long TargetChatRoomID;
         string Contents;
+        Message();
+        Message(long,long,string);
     };
 }
 
