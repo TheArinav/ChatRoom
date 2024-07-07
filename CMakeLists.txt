@@ -3,4 +3,4 @@ project(ChatRoomServer)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CPP src/main.cpp)
+add_executable(CPP src/main.cpp src/Classes/Backend/ServerAction.cpp src/Classes/Backend/ServerAction.h src/Classes/Backend/ActionMetaData.h)
