@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.o"
+  "CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.o.d"
   "CMakeFiles/CPP.dir/src/main.cpp.o"
   "CMakeFiles/CPP.dir/src/main.cpp.o.d"
   "CPP"

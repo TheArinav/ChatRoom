@@ -22,6 +22,10 @@ namespace Backend {
     public:
         //region Properties
         /**
+         * Host of this server.
+         */
+        static RegisteredClient Host;
+        /**
          * Logical identifier of client.
          */
         unsigned long ID;
@@ -46,9 +50,13 @@ namespace Backend {
          */
         time_t LastActivity;
         /**
-         * List of freinds.
+         * List of friends.
          */
         vector<RegisteredClient*> Friends;
+        /**
+         * List of pending friend requests.
+         */
+        vector<RegisteredClient*> PendingFriendRequests;
         //endregion
 
         //region Constructors/Destructors
@@ -114,6 +122,32 @@ namespace Backend {
          */
         void UpdateTime(){
             this->LastActivity=std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+        }
+        /**
+         * Add a friend request to this client.
+         * @param client Requester client
+         * @return whether the request was successfully added.
+         */
+        bool ReceiveRequest(RegisteredClient *client){
+            bool flag=false;
+            for(int i=0; i<PendingFriendRequests.size()&&!flag;flag=(PendingFriendRequests[i++]->ID==client->ID));
+            if(flag || HasFriend(client->ID))
+                return false;
+            PendingFriendRequests.push_back(client);
+            return true;
+        }
+        /**
+         * Answer a pending friend request.
+         * @param index The position of the request in the vector.
+         * @param answer To accept, enter 'true'. To reject, enter 'false'.
+         */
+        void AnswerRequest(int index, bool answer){
+            if(index<0 || index>=PendingFriendRequests.size())
+                return;
+            RegisteredClient *client = PendingFriendRequests[index];
+            PendingFriendRequests.erase(std::next(PendingFriendRequests.begin(),index));
+            if(answer)
+                Friends.push_back(client);
         }
         //endregion
     private:

@@ -1,8 +1,10 @@
 #include <vector>
+#include <string>
 #include "../GeneralTypes/Message.h"
 #include "RegisteredClient.h"
 
 using std::vector;
+using std::string;
 using GeneralTypes::Message;
 using std::next;
 
@@ -14,6 +16,10 @@ namespace Backend {
          * @brief The logical ID of the ChatRoomHost instance.
          */
         unsigned long ID;
+        /**
+         * @breif Display name for the ChatRoomHost instance.
+         */
+        string RoomName;
         /**
          * @brief The logical ID of the primary owner of the ChatRoomHost instance.
          */
@@ -36,9 +42,10 @@ namespace Backend {
         /**
          * Create a new ChatRoomHost instance.
          * @param creatorID Logical id of the creator client.
+         * @param roomName Display name for the room.
          */
-        ChatRoomHost(unsigned long creatorID)
-        : ID(count++),CreatorID(creatorID){}
+        ChatRoomHost(unsigned long creatorID, string roomName)
+        : ID(count++),CreatorID(creatorID), RoomName(roomName){}
         //endregion
 
         //region 'Add' Methods
