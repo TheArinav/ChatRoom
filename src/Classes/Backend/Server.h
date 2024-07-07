@@ -56,7 +56,7 @@ namespace Backend {
         /**
          * Starts this server.
          */
-        void Start();
+        bool Start();
         /**
          * Request a shutdown from the server.
          */

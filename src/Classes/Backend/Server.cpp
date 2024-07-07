@@ -53,17 +53,21 @@ namespace Backend {
         /**
          * Starts this server.
          */
-        void Start(){
+        bool Start(){
             ActionMetaData meta;
             ServerAction build = ServerAction(ActionType::ServerStarted, &RegisteredClient::Host, meta);
             build.CompleteAction();
             Log.push_back(build);
             while(!Shutdown){
                 if(!EnactAction())
+                {
                     std::cout << "[SERVER]:[ERROR]: Action failed";
+                    return false;
+                }
                 else
                     std::cout << "[SERVER]:[INFO]: Action enacted! details:\n" << Log.front().ToString() << "\n";
             }
+            return true;
         }
         /**
          * Request a shutdown from the server.

@@ -129,6 +129,30 @@ CPP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/build
 .PHONY : CPP/fast
 
+src/Classes/Backend/ServerAction.o: src/Classes/Backend/ServerAction.cpp.o
+.PHONY : src/Classes/Backend/ServerAction.o
+
+# target to build an object file
+src/Classes/Backend/ServerAction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.o
+.PHONY : src/Classes/Backend/ServerAction.cpp.o
+
+src/Classes/Backend/ServerAction.i: src/Classes/Backend/ServerAction.cpp.i
+.PHONY : src/Classes/Backend/ServerAction.i
+
+# target to preprocess a source file
+src/Classes/Backend/ServerAction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.i
+.PHONY : src/Classes/Backend/ServerAction.cpp.i
+
+src/Classes/Backend/ServerAction.s: src/Classes/Backend/ServerAction.cpp.s
+.PHONY : src/Classes/Backend/ServerAction.s
+
+# target to generate assembly for a file
+src/Classes/Backend/ServerAction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.s
+.PHONY : src/Classes/Backend/ServerAction.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CPP"
+	@echo "... src/Classes/Backend/ServerAction.o"
+	@echo "... src/Classes/Backend/ServerAction.i"
+	@echo "... src/Classes/Backend/ServerAction.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

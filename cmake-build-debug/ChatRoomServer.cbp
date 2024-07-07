@@ -82,6 +82,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/ActionMetaData.h">
+			<Option target="CPP"/>
+		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/ServerAction.cpp">
+			<Option target="CPP"/>
+		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/ServerAction.h">
+			<Option target="CPP"/>
+		</Unit>
 		<Unit filename="/tmp/ChatRoom/src/main.cpp">
 			<Option target="CPP"/>
 		</Unit>
