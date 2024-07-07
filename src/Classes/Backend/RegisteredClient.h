@@ -20,6 +20,10 @@ namespace Backend {
     public:
         //region Properties
         /**
+         * Host of this server.
+         */
+        static RegisteredClient Host;
+        /**
          * Logical identifier of client.
          */
         unsigned long ID;
@@ -47,6 +51,10 @@ namespace Backend {
          * List of friends.
          */
         vector<RegisteredClient*> Friends;
+        /**
+         * List of pending friend requests.
+         */
+        vector<RegisteredClient*> PendingFriendRequests;
         //endregion
 
         //region Constructors/Destructors
@@ -56,9 +64,6 @@ namespace Backend {
          * @param Address     Address of the client.
          */
         RegisteredClient(string DisplayName, sockaddr_in Address);
-
-        // Default destructor
-        ~RegisteredClient() = default;
         //endregion
 
         //region Methods
@@ -68,31 +73,39 @@ namespace Backend {
          * @return whether a change had occurred.
          */
         bool AddFriend(RegisteredClient *Client);
-
         /**
          * @brief Checks whether client has a friend with the given ID.
          * @param ID ID of a client to check
          * @return whether client has a friend with the given ID.
          */
         bool HasFriend(long ID);
-
         /**
          * Pushes a Message to the client's incoming message buffer (if it doesn't already exist there).
          * @param msg Message to push
          * @return Whether the message was pushed or not.
          */
         bool PushMessage(Message *msg);
-
         /**
          * Retrieves message at the top of the stack.
          * @return Message object from the top of the stack.
          */
         Message PopMessage();
-
         /**
          * Update the LastActivity time to the current.
          */
         void UpdateTime();
+        /**
+        * Add a friend request to this client.
+        * @param client Requester client
+        * @return whether the request was successfully added.
+        */
+        bool ReceiveRequest(RegisteredClient *client);
+        /**
+        * Answer a pending friend request.
+        * @param index The position of the request in the vector.
+        * @param answer To accept, enter 'true'. To reject, enter 'false'.
+        */
+        void AnswerRequest(int index, bool answer);
         //endregion
 
     private:

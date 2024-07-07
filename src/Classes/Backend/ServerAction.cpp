@@ -1,5 +1,6 @@
 #include <time.h>
 #include <chrono>
+#include <sstream>
 #include "RegisteredClient.h"
 #include "ActionMetaData.h"
 
@@ -9,6 +10,8 @@ using std::chrono::system_clock;
 
 namespace Backend {
     enum class ActionType{
+        ServerBuilt,
+        ServerStarted,
         AddClient,
         RemoveClient,
         LoginClient,
@@ -24,7 +27,9 @@ namespace Backend {
         SendMessage,
         EditMessage,
         DeleteMessage,
-        ForwardMessage
+        ForwardMessage,
+        SendFriendRequest,
+        AnswerFriendRequest
     };
     class ServerAction{
     public:
@@ -77,11 +82,24 @@ namespace Backend {
             TimeComplete=system_clock::to_time_t(system_clock::now());
             return true;
         }
-
+        string ToString() const {
+            std::stringstream ss;
+            ss << "ServerAction { "
+               << "Type: " << static_cast<int>(Type) << ", "
+               << "ID: " << ID << ", "
+               << "ActionRequester: " << (ActionRequester ? ActionRequester->toString() : "nullptr") << ", "
+               << "TimeRegistered: " << std::ctime(&TimeRegistered)
+               << "TimeComplete: " << (IsComplete ? std::ctime(&TimeComplete) : "Incomplete") << ", "
+               << "MetaData: " << MetaData.toString() << ", "
+               << "IsComplete: " << std::boolalpha << IsComplete
+               << " }";
+            return ss.str();
+        }
     private:
         /**
          * The amount of server actions created. Used for assigning addresses.
          */
         static int count;
     };
+
 } // Backend

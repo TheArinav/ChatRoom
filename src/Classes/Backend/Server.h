@@ -24,19 +24,60 @@ using Backend::ServerAction;
 namespace Backend {
     class Server{
     public:
-        unsigned long ID;
+        //region Properties
+        /**
+         * All messages ever received by this server (including deleted ones)
+         */
         vector<Message> Messages;
+        /**
+         * All clients of this server.
+         */
         vector<RegisteredClient> Clients;
+        /**
+         * All chat rooms of this server.
+         */
         vector<ChatRoomHost> Rooms;
+        /**
+         * Action log for this server.
+         */
+        vector<ServerAction> Log;
+        /**
+         * Actions awaiting execution.
+         */
         queue<ServerAction> ActionQueue;
+        //endregion
 
+        /**
+         * Builds a new server instance.
+         */
         Server();
 
+        //region Methods
+        /**
+         * Starts this server.
+         */
         void Start();
+        /**
+         * Request a shutdown from the server.
+         */
+        void SendInterruptSignal();
+        /**
+         * Enqueue a new action to the server.
+         * @param act Action to enqueue.
+         */
         void EnqueueAction(ServerAction *act);
+        /**
+         * Enact the action at the front of the queue.
+         * @return
+         */
+        bool EnactAction();
+        //endregion
 
     private:
-        static int count;
+        /**
+         * Used to cause the server to end execution.
+         */
+        bool Shutdown;
     };
 } // Backend
 
