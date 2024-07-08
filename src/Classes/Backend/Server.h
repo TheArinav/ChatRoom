@@ -9,13 +9,15 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <queue>
+#include <mutex>
 #include "../GeneralTypes/Message.h"
 #include "RegisteredClient.h"
 #include "ChatRoomHost.h"
-#include "ServerAction.h"
+#include "../GeneralTypes/ServerAction.h"
 
 using std::vector;
 using std::queue;
+using std::mutex;
 using GeneralTypes::Message;
 using Backend::RegisteredClient;
 using Backend::ChatRoomHost;
@@ -45,6 +47,10 @@ namespace Backend {
          * Actions awaiting execution.
          */
         queue<ServerAction> ActionQueue;
+        /**
+         * Used to ensure the ActionQueue is ThreadSafe.
+         */
+        mutex ActionQueueMutex;
         //endregion
 
         /**

@@ -1,17 +1,21 @@
 #include <vector>
 #include <queue>
 #include <iostream>
+#include <mutex>
 #include "../GeneralTypes/Message.h"
 #include "RegisteredClient.h"
 #include "ChatRoomHost.h"
-#include "ServerAction.h"
+#include "../GeneralTypes/ServerAction.h"
 
 using std::vector;
 using std::queue;
+using std::mutex;
+using std::lock_guard;
 using GeneralTypes::Message;
 using Backend::RegisteredClient;
 using Backend::ChatRoomHost;
 using Backend::ServerAction;
+
 
 namespace Backend {
     class Server{
@@ -37,14 +41,17 @@ namespace Backend {
          * Actions awaiting execution.
          */
         queue<ServerAction> ActionQueue;
+        /**
+         * Used to ensure the ActionQueue is ThreadSafe.
+         */
+        mutex ActionQueueMutex;
         //endregion
 
         /**
          * Builds a new server instance.
          */
         Server(){
-            ActionMetaData meta;
-            ServerAction build = ServerAction(ActionType::ServerBuilt, &RegisteredClient::Host, meta);
+            ServerAction build = ServerAction(ActionType::ServerBuilt, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
         }
@@ -54,8 +61,7 @@ namespace Backend {
          * Starts this server.
          */
         bool Start(){
-            ActionMetaData meta;
-            ServerAction build = ServerAction(ActionType::ServerStarted, &RegisteredClient::Host, meta);
+            ServerAction build = ServerAction(ActionType::ServerStarted, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
             while(!Shutdown){
@@ -89,7 +95,13 @@ namespace Backend {
          * @return
          */
         bool EnactAction(){
+            ServerAction act = ActionQueue.front();
+            ActionQueue.pop();
+            bool flag;
 
+            act.CompleteAction();
+            Log.push_back(act);
+            return true;
         }
         //endregion
 
