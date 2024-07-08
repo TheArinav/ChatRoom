@@ -3,7 +3,7 @@
 
 #include <ctime>
 #include <chrono>
-#include "RegisteredClient.h"
+#include "../Backend/RegisteredClient.h"
 #include "ActionMetaData.h"
 
 namespace Backend {
@@ -60,20 +60,15 @@ namespace Backend {
         std::time_t TimeComplete;
 
         /**
-         * Additional data about the action.
-         */
-        ActionMetaData MetaData;
-
-        /**
          * Used to check if the server had already enacted this action.
          */
         bool IsComplete;
         //endregion
-
+        ServerAction();
         /**
          * Create a new server action instance.
          */
-        ServerAction(ActionType type, RegisteredClient *requester, ActionMetaData meta);
+        ServerAction(ActionType type, RegisteredClient requester);
 
         /**
          * Used to note that the action was enacted by the server.
@@ -82,7 +77,8 @@ namespace Backend {
         bool CompleteAction();
 
         string ToString() const;
-
+        string Serialize() const;
+        static ServerAction Deserialize(const string& data);
     private:
         /**
          * The amount of server actions created. Used for assigning addresses.

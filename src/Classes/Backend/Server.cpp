@@ -1,17 +1,21 @@
 #include <vector>
 #include <queue>
 #include <iostream>
+#include <mutex>
 #include "../GeneralTypes/Message.h"
 #include "RegisteredClient.h"
 #include "ChatRoomHost.h"
-#include "ServerAction.h"
+#include "../GeneralTypes/ServerAction.h"
 
 using std::vector;
 using std::queue;
+using std::mutex;
+using std::lock_guard;
 using GeneralTypes::Message;
 using Backend::RegisteredClient;
 using Backend::ChatRoomHost;
 using Backend::ServerAction;
+
 
 namespace Backend {
     class Server{
@@ -37,14 +41,17 @@ namespace Backend {
          * Actions awaiting execution.
          */
         queue<ServerAction> ActionQueue;
+        /**
+         * Used to ensure the ActionQueue is ThreadSafe.
+         */
+        mutex ActionQueueMutex;
         //endregion
 
         /**
          * Builds a new server instance.
          */
         Server(){
-            ActionMetaData meta;
-            ServerAction build = ServerAction(ActionType::ServerBuilt, &RegisteredClient::Host, meta);
+            ServerAction build = ServerAction(ActionType::ServerBuilt, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
         }
@@ -54,8 +61,7 @@ namespace Backend {
          * Starts this server.
          */
         bool Start(){
-            ActionMetaData meta;
-            ServerAction build = ServerAction(ActionType::ServerStarted, &RegisteredClient::Host, meta);
+            ServerAction build = ServerAction(ActionType::ServerStarted, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
             while(!Shutdown){
@@ -79,17 +85,38 @@ namespace Backend {
          * Enqueue a new action to the server.
          * @param act Action to enqueue.
          */
-        void EnqueueAction(ServerAction *act){
+        bool EnqueueAction(ServerAction *act){
             if(ActionQueue.front().ID == act->ID)
-                return;
+                return false;
             ActionQueue.push(*act);
+            return true;
         }
         /**
          * Enact the action at the front of the queue.
          * @return
          */
-        bool EnactAction(){
+        bool EnactAction() {
+            ServerAction act;
 
+            {
+                std::lock_guard<std::mutex> guard(ActionQueueMutex);
+                if (ActionQueue.empty()) {
+                    return false; // No action to enact
+                }
+                act = ActionQueue.front();
+                ActionQueue.pop();
+            }
+
+            // Enact logic...
+
+            act.CompleteAction();
+
+            {
+                std::lock_guard<std::mutex> guard(LogMutex);
+                Log.push_back(act);
+            }
+
+            return true;
         }
         //endregion
 

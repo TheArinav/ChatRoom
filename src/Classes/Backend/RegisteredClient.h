@@ -58,6 +58,7 @@ namespace Backend {
         //endregion
 
         //region Constructors/Destructors
+        RegisteredClient();
         /*!
          * Create new RegisteredClient instance
          * @param DisplayName The display name of the client.
