@@ -11,17 +11,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4d8cbc4-6c93-4bea-97a2-0947b3cadb5b" name="Changes" comment="Infrastructure build 5&#10;- Created BackendComms.h">
+    <list default="true" id="d4d8cbc4-6c93-4bea-97a2-0947b3cadb5b" name="Changes" comment="Infrastructure build 6&#10;- Implemented BackendComms.h">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/ActionMetaData.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/BeckendComms.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/BeckendComms.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/Backend/RegisteredClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/RegisteredClient.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/RegisteredClient.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/RegisteredClient.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/Backend/Server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/Server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/Server.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/Server.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/ServerAction.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/ServerAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720344026213</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Infrastructure build 6&#10;- Implemented BackendComms.h">
+      <created>1720427200975</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720427200975</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Infrastructure build 4.1&#10;- Started implementing Server.h&#10;- Created ServerAction.h&#10;- Created ActionMetaData.h" />
     <MESSAGE value="Infrastructure build 5&#10;- Implemented Server.h (part I)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Infrastructure build 5&#10;- Implemented Server.h (part I)" />
+    <MESSAGE value="Infrastructure build 6&#10;- Implemented BackendComms.h" />
+    <option name="LAST_COMMIT_MESSAGE" value="Infrastructure build 6&#10;- Implemented BackendComms.h" />
   </component>
 </project>

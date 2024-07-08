@@ -64,7 +64,7 @@ namespace Backend {
          */
         bool IsComplete;
         //endregion
-
+        ServerAction();
         /**
          * Create a new server action instance.
          */

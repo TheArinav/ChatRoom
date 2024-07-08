@@ -85,22 +85,37 @@ namespace Backend {
          * Enqueue a new action to the server.
          * @param act Action to enqueue.
          */
-        void EnqueueAction(ServerAction *act){
+        bool EnqueueAction(ServerAction *act){
             if(ActionQueue.front().ID == act->ID)
-                return;
+                return false;
             ActionQueue.push(*act);
+            return true;
         }
         /**
          * Enact the action at the front of the queue.
          * @return
          */
-        bool EnactAction(){
-            ServerAction act = ActionQueue.front();
-            ActionQueue.pop();
-            bool flag;
+        bool EnactAction() {
+            ServerAction act;
+
+            {
+                std::lock_guard<std::mutex> guard(ActionQueueMutex);
+                if (ActionQueue.empty()) {
+                    return false; // No action to enact
+                }
+                act = ActionQueue.front();
+                ActionQueue.pop();
+            }
+
+            // Enact logic...
 
             act.CompleteAction();
-            Log.push_back(act);
+
+            {
+                std::lock_guard<std::mutex> guard(LogMutex);
+                Log.push_back(act);
+            }
+
             return true;
         }
         //endregion

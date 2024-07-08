@@ -65,6 +65,7 @@ namespace Backend {
         string Util;
         //endregion
 
+        ServerAction()=default;
         /**
          * Create a new server action instance.
          */
