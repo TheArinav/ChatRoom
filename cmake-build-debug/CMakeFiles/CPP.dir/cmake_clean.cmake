@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.o"
-  "CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.o.d"
+  "CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.o"
+  "CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.o.d"
+  "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o"
+  "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o.d"
   "CMakeFiles/CPP.dir/src/main.cpp.o"
   "CMakeFiles/CPP.dir/src/main.cpp.o.d"
   "CPP"

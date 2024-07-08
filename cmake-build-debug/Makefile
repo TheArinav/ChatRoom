@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/ChatRoom
+CMAKE_SOURCE_DIR = /tmp/tmp.Deqbg4Y2sX/ChatRoom
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/ChatRoom/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/ChatRoom/cmake-build-debug/CMakeFiles /tmp/ChatRoom/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/ChatRoom/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,53 @@ CPP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/build
 .PHONY : CPP/fast
 
-src/Classes/Backend/ServerAction.o: src/Classes/Backend/ServerAction.cpp.o
-.PHONY : src/Classes/Backend/ServerAction.o
+src/Classes/Backend/BeckendComms.o: src/Classes/Backend/BeckendComms.cpp.o
+.PHONY : src/Classes/Backend/BeckendComms.o
 
 # target to build an object file
-src/Classes/Backend/ServerAction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.o
-.PHONY : src/Classes/Backend/ServerAction.cpp.o
+src/Classes/Backend/BeckendComms.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.o
+.PHONY : src/Classes/Backend/BeckendComms.cpp.o
 
-src/Classes/Backend/ServerAction.i: src/Classes/Backend/ServerAction.cpp.i
-.PHONY : src/Classes/Backend/ServerAction.i
+src/Classes/Backend/BeckendComms.i: src/Classes/Backend/BeckendComms.cpp.i
+.PHONY : src/Classes/Backend/BeckendComms.i
 
 # target to preprocess a source file
-src/Classes/Backend/ServerAction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.i
-.PHONY : src/Classes/Backend/ServerAction.cpp.i
+src/Classes/Backend/BeckendComms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.i
+.PHONY : src/Classes/Backend/BeckendComms.cpp.i
 
-src/Classes/Backend/ServerAction.s: src/Classes/Backend/ServerAction.cpp.s
-.PHONY : src/Classes/Backend/ServerAction.s
+src/Classes/Backend/BeckendComms.s: src/Classes/Backend/BeckendComms.cpp.s
+.PHONY : src/Classes/Backend/BeckendComms.s
 
 # target to generate assembly for a file
-src/Classes/Backend/ServerAction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/ServerAction.cpp.s
-.PHONY : src/Classes/Backend/ServerAction.cpp.s
+src/Classes/Backend/BeckendComms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.s
+.PHONY : src/Classes/Backend/BeckendComms.cpp.s
+
+src/Classes/GeneralTypes/ServerAction.o: src/Classes/GeneralTypes/ServerAction.cpp.o
+.PHONY : src/Classes/GeneralTypes/ServerAction.o
+
+# target to build an object file
+src/Classes/GeneralTypes/ServerAction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o
+.PHONY : src/Classes/GeneralTypes/ServerAction.cpp.o
+
+src/Classes/GeneralTypes/ServerAction.i: src/Classes/GeneralTypes/ServerAction.cpp.i
+.PHONY : src/Classes/GeneralTypes/ServerAction.i
+
+# target to preprocess a source file
+src/Classes/GeneralTypes/ServerAction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.i
+.PHONY : src/Classes/GeneralTypes/ServerAction.cpp.i
+
+src/Classes/GeneralTypes/ServerAction.s: src/Classes/GeneralTypes/ServerAction.cpp.s
+.PHONY : src/Classes/GeneralTypes/ServerAction.s
+
+# target to generate assembly for a file
+src/Classes/GeneralTypes/ServerAction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.s
+.PHONY : src/Classes/GeneralTypes/ServerAction.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -186,9 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CPP"
-	@echo "... src/Classes/Backend/ServerAction.o"
-	@echo "... src/Classes/Backend/ServerAction.i"
-	@echo "... src/Classes/Backend/ServerAction.s"
+	@echo "... src/Classes/Backend/BeckendComms.o"
+	@echo "... src/Classes/Backend/BeckendComms.i"
+	@echo "... src/Classes/Backend/BeckendComms.s"
+	@echo "... src/Classes/GeneralTypes/ServerAction.o"
+	@echo "... src/Classes/GeneralTypes/ServerAction.i"
+	@echo "... src/Classes/GeneralTypes/ServerAction.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

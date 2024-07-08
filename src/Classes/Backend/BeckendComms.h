@@ -41,7 +41,7 @@ namespace Backend {
          */
         static bool Start();
 
-        /*
+        /**
          * End execution and close the server permanently.
          */
         static bool Stop();

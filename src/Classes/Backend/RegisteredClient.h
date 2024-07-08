@@ -58,6 +58,7 @@ namespace Backend {
         //endregion
 
         //region Constructors/Destructors
+        ~RegisteredClient();
         RegisteredClient();
         /*!
          * Create new RegisteredClient instance

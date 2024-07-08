@@ -2,9 +2,7 @@
 #include <chrono>
 #include <sstream>
 #include "../Backend/RegisteredClient.h"
-#include "ActionMetaData.h"
 
-using Backend::ActionMetaData;
 using Backend::RegisteredClient;
 using std::chrono::system_clock;
 using std::to_string;
@@ -42,7 +40,7 @@ namespace Backend {
         /**
          * Logical ID of the action.
          */
-        unsigned long ID;
+        unsigned long ID{};
         /**
          * Client who requested the action.
          */
@@ -50,11 +48,11 @@ namespace Backend {
         /**
          * System time when the action object was built on the backend.
          */
-        time_t TimeRegistered;
+        time_t TimeRegistered{};
         /**
          * System time when the server has completed enacting the action.
          */
-        time_t TimeComplete;
+        time_t TimeComplete{};
         /**
          * Client/ChatRoom/Message IDs that are involved.
          */
@@ -64,8 +62,8 @@ namespace Backend {
          */
         string Util;
         //endregion
-
-        ServerAction()=default;
+        ~ServerAction()= default;
+        ServerAction() = default;
         /**
          * Create a new server action instance.
          */

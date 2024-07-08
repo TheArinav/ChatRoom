@@ -99,20 +99,66 @@ namespace Backend {
             ServerAction act;
 
             {
-                std::lock_guard<std::mutex> guard(ActionQueueMutex);
+                lock_guard<std::mutex> guard(ActionQueueMutex);
                 if (ActionQueue.empty()) {
-                    return false; // No action to enact
+                    return false;
                 }
                 act = ActionQueue.front();
                 ActionQueue.pop();
             }
 
-            // Enact logic...
+            //region Temporary variables
+            bool flag=false;
+            int index=-1;
+            //endregion
+
+            switch (act.Type){
+                case ActionType::AddClient:{
+                  for(int i=0; i<Clients.size()&&!flag; flag=Clients[i].ID==act.ActionRequester.ID);
+                  if(flag)
+                      return false;
+                  Clients.push_back(act.ActionRequester);
+                  break;
+                }
+                case ActionType::RemoveClient:{
+                    for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i].ID==act.ActionRequester.ID)?i:index);
+                    if(!(index+1))
+                        return false;
+                    Clients.erase(Clients.begin()+index);
+                    break;
+                }
+                case ActionType::LoginClient:{
+                    for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i].ID==act.ActionRequester.ID)?i:index);
+                    if(!(index+1))
+                        return false;
+                    Clients[index].UpdateTime();
+                    Clients[index].IsConnected= true;
+                    break;
+                }
+                case ActionType::LogoutClient:{
+                    for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i].ID==act.ActionRequester.ID)?i:index);
+                    if(!(index+1))
+                        return false;
+                    Clients[index].UpdateTime();
+                    Clients[index].IsConnected= false;
+                    break;
+                }
+                case ActionType::RenameClient:{
+                    for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i].ID==act.ActionRequester.ID)?i:index);
+                    if(!(index+1))
+                        return false;
+                    Clients[index].DisplayName=move(act.Util);
+                }
+
+                default:{
+                    break;
+                }
+            }
 
             act.CompleteAction();
 
             {
-                std::lock_guard<std::mutex> guard(LogMutex);
+                lock_guard<mutex> guard(ActionQueueMutex);
                 Log.push_back(act);
             }
 

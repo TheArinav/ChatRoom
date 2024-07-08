@@ -4,7 +4,6 @@
 #include <ctime>
 #include <chrono>
 #include "../Backend/RegisteredClient.h"
-#include "ActionMetaData.h"
 
 namespace Backend {
 
@@ -47,7 +46,7 @@ namespace Backend {
         /**
          * Client who requested the action.
          */
-        RegisteredClient *ActionRequester;
+        RegisteredClient ActionRequester;
 
         /**
          * System time when the action object was built on the backend.
@@ -58,13 +57,17 @@ namespace Backend {
          * System time when the server has completed enacting the action.
          */
         std::time_t TimeComplete;
-
         /**
          * Used to check if the server had already enacted this action.
          */
         bool IsComplete;
+        /**
+         * Used to store ChatRoom/Client names or Message contents
+         */
+        string Util;
         //endregion
-        ServerAction();
+        ~ServerAction(){}
+        ServerAction(){}
         /**
          * Create a new server action instance.
          */

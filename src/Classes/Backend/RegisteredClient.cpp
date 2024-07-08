@@ -1,7 +1,7 @@
 //
 // Created by ariel on 7/5/2024.
 //
-
+#include <iostream>
 #include <string>
 #include <stack>
 #include <netinet/in.h>
@@ -60,7 +60,10 @@ namespace Backend {
         //endregion
 
         //region Constructors/Destructors
-        RegisteredClient()=default;
+        ~RegisteredClient(){
+            std::cout<< "Rest In Peace [" << DisplayName << "]\n";
+        }
+        RegisteredClient(){}
         /*!
          * Create new RegisteredClient instance
          * @param DisplayName The display name of the client.

@@ -57,7 +57,6 @@ namespace Backend {
          * Builds a new server instance.
          */
         Server();
-
         //region Methods
         /**
          * Starts this server.
