@@ -43,7 +43,7 @@ namespace GeneralTypes {
          * @param TargetChatRoomID Logical identifier of recipient chat room.
          * @param Contents Message contents.
          */
-        Message(long ClientID,long TargetChatRoomID,string Contents);
+        Message(unsigned long ClientID,unsigned long TargetChatRoomID,string Contents);
         //endregion
     private:
         /**

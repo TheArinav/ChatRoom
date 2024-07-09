@@ -24,12 +24,7 @@ namespace GeneralTypes {
         RemoveRoomMember,
         PromoteRoomMember,
         DemoteRoomMember,
-        SendMessage,
-        EditMessage,
-        DeleteMessage,
-        ForwardMessage,
-        SendFriendRequest,
-        AnswerFriendRequest
+        SendMessage
     };
 
     class ServerAction {

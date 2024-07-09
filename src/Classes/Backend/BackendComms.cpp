@@ -78,7 +78,7 @@ namespace Backend {
         return true;
     }
     sockaddr_in BackendComms::BindSocket() {
-        sockaddr_in addressIn;
+        sockaddr_in addressIn{};
         addressIn.sin_family = AF_INET;
         addressIn.sin_addr.s_addr = INADDR_ANY;
         addressIn.sin_port = htons(8080);
