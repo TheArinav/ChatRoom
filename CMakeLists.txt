@@ -20,6 +20,10 @@ add_executable(CPP
         src/Classes/Backend/ChatRoomHost.h
         src/Classes/Backend/Server.cpp
         src/Classes/Backend/Server.h
+        src/Classes/Frontend/Account.cpp
+        src/Classes/Frontend/Account.h
+        src/Classes/GeneralTypes/ClientAction.cpp
+        src/Classes/GeneralTypes/ClientAction.h
         )
 
 find_package(Threads REQUIRED)

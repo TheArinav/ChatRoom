@@ -7,7 +7,7 @@
 using Backend::RegisteredClient;
 using std::chrono::system_clock;
 using std::to_string;
-using GeneralTypes::ActionType;
+using GeneralTypes::ServerActionType;
 using GeneralTypes::ServerAction;
 
 namespace GeneralTypes {
@@ -15,7 +15,7 @@ namespace GeneralTypes {
     /**
     * Create a new server action instance.
     */
-    ServerAction::ServerAction(ActionType type, RegisteredClient requester):
+    ServerAction::ServerAction(ServerActionType type, RegisteredClient requester):
     Type(type), ID(count++), ActionRequester(requester),
     TimeRegistered(system_clock::to_time_t(system_clock::now())), TimeComplete((time_t)(-1))
     {}
@@ -76,7 +76,7 @@ namespace GeneralTypes {
         while (std::getline(ids_stream, id_str, ',')) {
             ids.push_back(std::stoi(id_str));
         }
-        auto action_type = static_cast<ActionType>(type);
+        auto action_type = static_cast<ServerActionType>(type);
         ServerAction action(action_type, requester);
         action.IDs = move(action.IDs);
         action.Util = move(util);

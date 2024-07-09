@@ -9,7 +9,7 @@ using Backend::RegisteredClient;
 
 namespace GeneralTypes {
 
-    enum class ActionType {
+    enum class ServerActionType {
         ServerBuilt,
         ServerStarted,
         AddClient,
@@ -33,7 +33,7 @@ namespace GeneralTypes {
         /**
          * Type of the action.
          */
-        ActionType Type;
+        ServerActionType Type;
 
         /**
          * Logical ID of the action.
@@ -71,7 +71,7 @@ namespace GeneralTypes {
         /**
          * Create a new server action instance.
          */
-        ServerAction(ActionType type, RegisteredClient requester);
+        ServerAction(ServerActionType type, RegisteredClient requester);
         /**
          * Used to note that the action was enacted by the server.
          * @return

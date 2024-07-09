@@ -225,6 +225,54 @@ src/Classes/Backend/Server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.s
 .PHONY : src/Classes/Backend/Server.cpp.s
 
+src/Classes/Frontend/Account.o: src/Classes/Frontend/Account.cpp.o
+.PHONY : src/Classes/Frontend/Account.o
+
+# target to build an object file
+src/Classes/Frontend/Account.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Frontend/Account.cpp.o
+.PHONY : src/Classes/Frontend/Account.cpp.o
+
+src/Classes/Frontend/Account.i: src/Classes/Frontend/Account.cpp.i
+.PHONY : src/Classes/Frontend/Account.i
+
+# target to preprocess a source file
+src/Classes/Frontend/Account.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Frontend/Account.cpp.i
+.PHONY : src/Classes/Frontend/Account.cpp.i
+
+src/Classes/Frontend/Account.s: src/Classes/Frontend/Account.cpp.s
+.PHONY : src/Classes/Frontend/Account.s
+
+# target to generate assembly for a file
+src/Classes/Frontend/Account.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Frontend/Account.cpp.s
+.PHONY : src/Classes/Frontend/Account.cpp.s
+
+src/Classes/GeneralTypes/ClientAction.o: src/Classes/GeneralTypes/ClientAction.cpp.o
+.PHONY : src/Classes/GeneralTypes/ClientAction.o
+
+# target to build an object file
+src/Classes/GeneralTypes/ClientAction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ClientAction.cpp.o
+.PHONY : src/Classes/GeneralTypes/ClientAction.cpp.o
+
+src/Classes/GeneralTypes/ClientAction.i: src/Classes/GeneralTypes/ClientAction.cpp.i
+.PHONY : src/Classes/GeneralTypes/ClientAction.i
+
+# target to preprocess a source file
+src/Classes/GeneralTypes/ClientAction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ClientAction.cpp.i
+.PHONY : src/Classes/GeneralTypes/ClientAction.cpp.i
+
+src/Classes/GeneralTypes/ClientAction.s: src/Classes/GeneralTypes/ClientAction.cpp.s
+.PHONY : src/Classes/GeneralTypes/ClientAction.s
+
+# target to generate assembly for a file
+src/Classes/GeneralTypes/ClientAction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ClientAction.cpp.s
+.PHONY : src/Classes/GeneralTypes/ClientAction.cpp.s
+
 src/Classes/GeneralTypes/Message.o: src/Classes/GeneralTypes/Message.cpp.o
 .PHONY : src/Classes/GeneralTypes/Message.o
 
@@ -342,6 +390,12 @@ help:
 	@echo "... src/Classes/Backend/Server.o"
 	@echo "... src/Classes/Backend/Server.i"
 	@echo "... src/Classes/Backend/Server.s"
+	@echo "... src/Classes/Frontend/Account.o"
+	@echo "... src/Classes/Frontend/Account.i"
+	@echo "... src/Classes/Frontend/Account.s"
+	@echo "... src/Classes/GeneralTypes/ClientAction.o"
+	@echo "... src/Classes/GeneralTypes/ClientAction.i"
+	@echo "... src/Classes/GeneralTypes/ClientAction.s"
 	@echo "... src/Classes/GeneralTypes/Message.o"
 	@echo "... src/Classes/GeneralTypes/Message.i"
 	@echo "... src/Classes/GeneralTypes/Message.s"

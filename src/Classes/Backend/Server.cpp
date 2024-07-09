@@ -16,7 +16,7 @@ using GeneralTypes::Message;
 using Backend::RegisteredClient;
 using Backend::ChatRoomHost;
 using GeneralTypes::ServerAction;
-using GeneralTypes::ActionType;
+using GeneralTypes::ServerActionType;
 
 
 namespace Backend {
@@ -24,7 +24,7 @@ namespace Backend {
          * Builds a new server instance.
          */
         Server::Server(){
-            ServerAction build = ServerAction(ActionType::ServerBuilt, RegisteredClient::Host);
+            ServerAction build = ServerAction(ServerActionType::ServerBuilt, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
         }
@@ -34,10 +34,11 @@ namespace Backend {
          * Starts this server.
          */
         bool Server::Start(){
-            ServerAction build = ServerAction(ActionType::ServerStarted, RegisteredClient::Host);
+            ServerAction build = ServerAction(ServerActionType::ServerStarted, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
             while(!Shutdown){
+                auto last = ActionQueue.front();
                 if(!EnactAction())
                 {
                     std::cout << "[SERVER]:[ERROR]: Action failed";
@@ -98,21 +99,21 @@ namespace Backend {
             //endregion
 
             switch (act.Type){
-                case ActionType::AddClient:{
+                case ServerActionType::AddClient:{
                   for(int i=0; i<Clients.size()&&!flag; flag=Clients[i++].ID==act.ActionRequester.ID);
                   if(flag)
                       return false;
                   Clients.push_back(act.ActionRequester);
                   break;
                 }
-                case ActionType::RemoveClient:{
+                case ServerActionType::RemoveClient:{
                     for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i++].ID==act.ActionRequester.ID)?i:index);
                     if(!(index+1))
                         return false;
                     Clients.erase(Clients.begin()+index);
                     break;
                 }
-                case ActionType::LoginClient:{
+                case ServerActionType::LoginClient:{
                     for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i++].ID==act.ActionRequester.ID)?i:index);
                     if(!(index+1))
                         return false;
@@ -120,7 +121,7 @@ namespace Backend {
                     Clients[index].IsConnected= true;
                     break;
                 }
-                case ActionType::LogoutClient:{
+                case ServerActionType::LogoutClient:{
                     for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i++].ID==act.ActionRequester.ID)?i:index);
                     if(!(index+1))
                         return false;
@@ -128,13 +129,13 @@ namespace Backend {
                     Clients[index].IsConnected= false;
                     break;
                 }
-                case ActionType::RenameClient:{
+                case ServerActionType::RenameClient:{
                     for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i++].ID==act.ActionRequester.ID)?i:index);
                     if(!(index+1))
                         return false;
                     Clients[index].DisplayName=move(act.Util);
                 }
-                case ActionType::AddRoom:{
+                case ServerActionType::AddRoom:{
                     for(int i=0; i<Clients.size()&&!flag; flag=Clients[i++].ID==act.ActionRequester.ID);
                     if(flag)
                         return false;
@@ -158,7 +159,7 @@ namespace Backend {
                     Rooms.push_back(buildRoom);
                     break;
                 }
-                case ActionType::RemoveRoom:{
+                case ServerActionType::RemoveRoom:{
                     for(int i=0; i<Rooms.size()&&!(index+1); index=(Rooms[i++].ID==act.IDs[0])?i:index);
                     if(!(index+1))
                         return false;
@@ -170,7 +171,7 @@ namespace Backend {
                     Rooms.erase(Rooms.begin()+index);
                     break;
                 }
-                case ActionType::RenameRoom:{
+                case ServerActionType::RenameRoom:{
                     for(int i=0; i<Rooms.size()&&!(index+1); index=(Rooms[i++].ID==act.IDs[0])?i:index);
                     if(!(index+1))
                         return false;
@@ -180,7 +181,7 @@ namespace Backend {
                     Rooms[index].RoomName=move(act.Util);
                     break;
                 }
-                case ActionType::AddRoomMember:{
+                case ServerActionType::AddRoomMember:{
                     for(int i=0; i<Rooms.size()&&!(index+1); index=(Rooms[i++].ID==act.IDs[0])?i:index);
                     if(!(index+1))
                         return false;
@@ -200,7 +201,7 @@ namespace Backend {
                         Rooms[index].PushMember(cur);
                     break;
                 }
-                case ActionType::RemoveRoomMember:{
+                case ServerActionType::RemoveRoomMember:{
                     for(int i=0; i<Rooms.size()&&!(index+1); index=(Rooms[i++].ID==act.IDs[0])?i:index);
                     if(!(index+1))
                         return false;
@@ -220,7 +221,7 @@ namespace Backend {
                         Rooms[index].RemoveMember(cur);
                     break;
                 }
-                case ActionType::PromoteRoomMember:{
+                case ServerActionType::PromoteRoomMember:{
                     for(int i=0; i<Rooms.size()&&!(index+1); index=(Rooms[i++].ID==act.IDs[0])?i:index);
                     if(!(index+1))
                         return false;
@@ -237,7 +238,7 @@ namespace Backend {
                     Rooms[index].PromoteMember(toPromote);
                     break;
                 }
-                case ActionType::DemoteRoomMember:{
+                case ServerActionType::DemoteRoomMember:{
                     for(int i=0; i<Rooms.size()&&!(index+1); index=(Rooms[i++].ID==act.IDs[0])?i:index);
                     if(!(index+1))
                         return false;
@@ -254,7 +255,7 @@ namespace Backend {
                     Rooms[index].DemoteMember(toDemote);
                     break;
                 }
-                case ActionType::SendMessage:{
+                case ServerActionType::SendMessage:{
                     for(int i=0; i<Clients.size()&&!(index+1); index=(Clients[i++].ID==act.ActionRequester.ID)?i:index);
                     if(!(index+1))
                         return false;

@@ -90,6 +90,18 @@
 		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/Server.h">
 			<Option target="CPP"/>
 		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Frontend/Account.cpp">
+			<Option target="CPP"/>
+		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Frontend/Account.h">
+			<Option target="CPP"/>
+		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp">
+			<Option target="CPP"/>
+		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/GeneralTypes/ClientAction.h">
+			<Option target="CPP"/>
+		</Unit>
 		<Unit filename="/tmp/ChatRoom/src/Classes/GeneralTypes/Message.cpp">
 			<Option target="CPP"/>
 		</Unit>
