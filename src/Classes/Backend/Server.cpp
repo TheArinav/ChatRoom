@@ -24,6 +24,7 @@ namespace Backend {
          * Builds a new server instance.
          */
         Server::Server(){
+            Shutdown= false;
             ServerAction build = ServerAction(ServerActionType::ServerBuilt, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
