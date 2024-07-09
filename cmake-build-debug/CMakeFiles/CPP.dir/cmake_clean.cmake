@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o"
   "CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o.d"
+  "CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o"
+  "CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o.d"
   "CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o"
   "CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o.d"
+  "CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o"
+  "CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o.d"
   "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o"
   "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o.d"
   "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o"

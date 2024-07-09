@@ -72,6 +72,7 @@ namespace GeneralTypes {
          */
         string Util;
         //endregion
+        ServerAction();
         /**
          * Create a new server action instance.
          */

@@ -125,4 +125,5 @@ namespace Backend {
             Friends.push_back(client);
     }
     //endregion
+    RegisteredClient RegisteredClient::Host={};
 }

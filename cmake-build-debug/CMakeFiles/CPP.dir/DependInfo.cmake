@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/tmp/ChatRoom/src/Classes/Backend/BackendComms.cpp" "CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o.d"
+  "/tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp" "CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o.d"
   "/tmp/ChatRoom/src/Classes/Backend/RegisteredClient.cpp" "CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o.d"
+  "/tmp/ChatRoom/src/Classes/Backend/Server.cpp" "CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o.d"
   "/tmp/ChatRoom/src/Classes/GeneralTypes/Message.cpp" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o.d"
   "/tmp/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o.d"
   "/tmp/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o.d"

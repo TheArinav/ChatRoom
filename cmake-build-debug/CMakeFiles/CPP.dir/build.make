@@ -153,6 +153,34 @@ CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/GeneralTypes/Message.cpp -o CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.s
 
+CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o: CMakeFiles/CPP.dir/flags.make
+CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o: ../src/Classes/Backend/ChatRoomHost.cpp
+CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o: CMakeFiles/CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o -MF CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o.d -o CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o -c /tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp
+
+CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp > CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.i
+
+CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp -o CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.s
+
+CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o: CMakeFiles/CPP.dir/flags.make
+CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o: ../src/Classes/Backend/Server.cpp
+CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o: CMakeFiles/CPP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o -MF CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o.d -o CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o -c /tmp/ChatRoom/src/Classes/Backend/Server.cpp
+
+CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/Backend/Server.cpp > CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.i
+
+CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/Backend/Server.cpp -o CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.s
+
 # Object files for target CPP
 CPP_OBJECTS = \
 "CMakeFiles/CPP.dir/src/main.cpp.o" \
@@ -160,7 +188,9 @@ CPP_OBJECTS = \
 "CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o" \
 "CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o" \
 "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o" \
-"CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o"
+"CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o" \
+"CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o" \
+"CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o"
 
 # External object files for target CPP
 CPP_EXTERNAL_OBJECTS =
@@ -171,9 +201,11 @@ CPP: CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o
 CPP: CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o
 CPP: CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o
 CPP: CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o
+CPP: CMakeFiles/CPP.dir/src/Classes/Backend/ChatRoomHost.cpp.o
+CPP: CMakeFiles/CPP.dir/src/Classes/Backend/Server.cpp.o
 CPP: CMakeFiles/CPP.dir/build.make
 CPP: CMakeFiles/CPP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable CPP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CPP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CPP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

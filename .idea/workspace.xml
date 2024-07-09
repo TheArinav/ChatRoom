@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="ChatRoomServer" targetName="CPP" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
@@ -11,19 +9,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4d8cbc4-6c93-4bea-97a2-0947b3cadb5b" name="Changes" comment="Beckend Pre1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+    <list default="true" id="d4d8cbc4-6c93-4bea-97a2-0947b3cadb5b" name="Changes" comment="Beckend Pre1.1&#10;- Fixed class formatting for all files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/src/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CPP.dir/src/main.cpp.o.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterDir="false" />
@@ -33,17 +29,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ChatRoomServer.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ChatRoomServer.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/BeckendComms.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/BackendComms.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/BeckendComms.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/BackendComms.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/ChatRoomHost.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/ChatRoomHost.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/Backend/RegisteredClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/RegisteredClient.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/RegisteredClient.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/RegisteredClient.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/Server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/Server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Backend/Server.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Backend/Server.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/GeneralTypes/Message.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/Message.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/GeneralTypes/Message.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/Message.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/GeneralTypes/MessageQueue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/MessageQueue.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GeneralTypes/ServerAction.h" afterDir="false" />
     </list>
@@ -55,12 +41,14 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -73,21 +61,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cmake.loaded.for.project&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/IMOE001/Documents/GitHub/ChatRoom&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "cmake.loaded.for.project": "true",
+    "last_opened_file_path": "C:/Users/IMOE001/Documents/GitHub/ChatRoom",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "CPPToolchains"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\IMOE001\Documents\GitHub\ChatRoom\src\Classes\GeneralTypes" />
@@ -115,7 +104,7 @@
       <updated>1720325970278</updated>
       <workItem from="1720325980464" duration="17217000" />
       <workItem from="1720503151908" duration="4494000" />
-      <workItem from="1720508324907" duration="6793000" />
+      <workItem from="1720508324907" duration="7811000" />
     </task>
     <task id="LOCAL-00001" summary="Infrastructure build 4.1&#10;- Started implementing Server.h&#10;- Created ServerAction.h&#10;- Created ActionMetaData.h">
       <created>1720336623983</created>
@@ -159,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720427747316</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Beckend Pre1.1&#10;- Fixed class formatting for all files">
+      <created>1720515296530</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720515296530</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +183,7 @@
     <MESSAGE value="Infrastructure build 5&#10;- Implemented Server.h (part I)" />
     <MESSAGE value="Infrastructure build 6&#10;- Implemented BackendComms.h" />
     <MESSAGE value="Beckend Pre1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beckend Pre1.0" />
+    <MESSAGE value="Beckend Pre1.1&#10;- Fixed class formatting for all files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beckend Pre1.1&#10;- Fixed class formatting for all files" />
   </component>
 </project>

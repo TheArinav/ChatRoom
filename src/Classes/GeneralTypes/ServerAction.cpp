@@ -82,4 +82,6 @@ namespace GeneralTypes {
         action.Util = move(util);
         return action;
     }
+
+    ServerAction::ServerAction() =default;
 } // Backend

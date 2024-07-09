@@ -11,10 +11,10 @@
 				<Option working_dir="/tmp/ChatRoom/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CPP">
@@ -23,20 +23,12 @@
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/aarch64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/aarch64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
+				<Compiler/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPP"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPP"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CPP/fast">
@@ -45,40 +37,32 @@
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/aarch64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/aarch64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
+				<Compiler/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPP/fast"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPP/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/tmp/ChatRoom/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/tmp/ChatRoom/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j3 -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -88,10 +72,22 @@
 		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/BackendComms.h">
 			<Option target="CPP"/>
 		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp">
+			<Option target="CPP"/>
+		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.h">
+			<Option target="CPP"/>
+		</Unit>
 		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/RegisteredClient.cpp">
 			<Option target="CPP"/>
 		</Unit>
 		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/RegisteredClient.h">
+			<Option target="CPP"/>
+		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/Server.cpp">
+			<Option target="CPP"/>
+		</Unit>
+		<Unit filename="/tmp/ChatRoom/src/Classes/Backend/Server.h">
 			<Option target="CPP"/>
 		</Unit>
 		<Unit filename="/tmp/ChatRoom/src/Classes/GeneralTypes/Message.cpp">
