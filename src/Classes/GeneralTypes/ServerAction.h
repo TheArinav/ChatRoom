@@ -5,7 +5,9 @@
 #include <chrono>
 #include "../Backend/RegisteredClient.h"
 
-namespace Backend {
+using Backend::RegisteredClient;
+
+namespace GeneralTypes {
 
     enum class ActionType {
         ServerBuilt,
@@ -62,25 +64,38 @@ namespace Backend {
          */
         bool IsComplete;
         /**
+         * Used to store logical identifiers of Messages/Clients/Rooms.
+         */
+        vector<unsigned long> IDs;
+        /**
          * Used to store ChatRoom/Client names or Message contents
          */
         string Util;
         //endregion
-        ~ServerAction(){}
-        ServerAction(){}
         /**
          * Create a new server action instance.
          */
         ServerAction(ActionType type, RegisteredClient requester);
-
         /**
          * Used to note that the action was enacted by the server.
          * @return
          */
-        bool CompleteAction();
-
+        void CompleteAction();
+        /**
+         * Serializes this object to a human-readable format
+         * @return
+         */
         string ToString() const;
+        /**
+         * Serializes this object for transfer through a socket.
+         * @return
+         */
         string Serialize() const;
+        /**
+         * Deserializes a packet back into the object
+         * @param data
+         * @return
+         */
         static ServerAction Deserialize(const string& data);
     private:
         /**

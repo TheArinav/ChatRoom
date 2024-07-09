@@ -21,8 +21,7 @@ using std::lock_guard;
 using std::make_unique;
 
 namespace Backend {
-
-    class BeckendComms {
+    class BackendComms {
     public:
         /**
          * The Host server.
@@ -48,10 +47,10 @@ namespace Backend {
 
     private:
         // Prevent instantiation by making the constructor and destructor private
-        BeckendComms() = delete;
-        ~BeckendComms() = delete;
-        BeckendComms(const BeckendComms&) = delete;
-        BeckendComms& operator=(const BeckendComms&) = delete;
+        BackendComms() = delete;
+        ~BackendComms() = delete;
+        BackendComms(const BackendComms&) = delete;
+        BackendComms& operator=(const BackendComms&) = delete;
 
         /**
          * Server file descriptor.
@@ -90,11 +89,11 @@ namespace Backend {
     };
 
     // Static member definitions
-    unique_ptr<Server> BeckendComms::HostServer = nullptr;
-    int BeckendComms::server_fd = 0;
-    sockaddr_in BeckendComms::ServerSocket = {};
-    mutex BeckendComms::slMutex;
-    bool BeckendComms::stopListen = true;
+    unique_ptr<Server> BackendComms::HostServer = nullptr;
+    int BackendComms::server_fd = 0;
+    sockaddr_in BackendComms::ServerSocket = {};
+    mutex BackendComms::slMutex;
+    bool BackendComms::stopListen = true;
 
 } // namespace Backend
 

@@ -21,7 +21,7 @@ using std::mutex;
 using GeneralTypes::Message;
 using Backend::RegisteredClient;
 using Backend::ChatRoomHost;
-using Backend::ServerAction;
+using GeneralTypes::ServerAction;
 
 namespace Backend {
     class Server{
@@ -69,8 +69,9 @@ namespace Backend {
         /**
          * Enqueue a new action to the server.
          * @param act Action to enqueue.
+         * @return whether the action was successfully enqueued.
          */
-        void EnqueueAction(ServerAction *act);
+        bool EnqueueAction(ServerAction *act);
         /**
          * Enact the action at the front of the queue.
          * @return

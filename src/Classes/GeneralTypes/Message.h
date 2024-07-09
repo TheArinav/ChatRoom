@@ -26,6 +26,10 @@ namespace GeneralTypes {
          * Logical identifier of recipient chat room.
          */
         unsigned long TargetChatRoomID;
+        /**
+         * The content of the Message.
+         */
+        string Contents;
         //endregion
 
         //region Constructors/Destructors

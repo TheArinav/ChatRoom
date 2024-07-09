@@ -26,7 +26,7 @@ namespace Backend {
         /**
          * Logical identifier of client.
          */
-        unsigned long ID;
+        unsigned long ID{};
         /**
          * @brief Client name to be displayed to users.
          */
@@ -38,15 +38,15 @@ namespace Backend {
         /**
          * Socket address.
          */
-        sockaddr_in Address;
+        sockaddr_in Address{};
         /**
          * Is client currently connected.
          */
-        bool IsConnected;
+        bool IsConnected{};
         /**
          * Time of latest activity by client.
          */
-        time_t LastActivity;
+        time_t LastActivity{};
         /**
          * List of friends.
          */
@@ -80,7 +80,7 @@ namespace Backend {
          * @param ID ID of a client to check
          * @return whether client has a friend with the given ID.
          */
-        bool HasFriend(long ID);
+        bool HasFriend(unsigned long ID);
         /**
          * Pushes a Message to the client's incoming message buffer (if it doesn't already exist there).
          * @param msg Message to push
@@ -109,8 +109,6 @@ namespace Backend {
         */
         void AnswerRequest(int index, bool answer);
         //endregion
-
-    private:
         /*!
          * Stores number of created users. Used to assign IDs.
          */

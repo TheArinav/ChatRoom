@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/CPP.dir/src/main.cpp.o CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.o -o CPP 
+/usr/bin/c++ -g CMakeFiles/CPP.dir/src/main.cpp.o CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o -o CPP 

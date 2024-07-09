@@ -6,6 +6,7 @@
 #include "RegisteredClient.h"
 #include "ChatRoomHost.h"
 #include "../GeneralTypes/ServerAction.h"
+#include "Server.h"
 
 using std::vector;
 using std::queue;
@@ -14,43 +15,15 @@ using std::lock_guard;
 using GeneralTypes::Message;
 using Backend::RegisteredClient;
 using Backend::ChatRoomHost;
-using Backend::ServerAction;
+using GeneralTypes::ServerAction;
+using GeneralTypes::ActionType;
 
 
 namespace Backend {
-    class Server{
-    public:
-        //region Properties
-        /**
-         * All messages ever received by this server (including deleted ones)
-         */
-        vector<Message> Messages;
-        /**
-         * All clients of this server.
-         */
-        vector<RegisteredClient> Clients;
-        /**
-         * All chat rooms of this server.
-         */
-        vector<ChatRoomHost> Rooms;
-        /**
-         * Action log for this server.
-         */
-        vector<ServerAction> Log;
-        /**
-         * Actions awaiting execution.
-         */
-        queue<ServerAction> ActionQueue;
-        /**
-         * Used to ensure the ActionQueue is ThreadSafe.
-         */
-        mutex ActionQueueMutex;
-        //endregion
-
         /**
          * Builds a new server instance.
          */
-        Server(){
+        Server::Server(){
             ServerAction build = ServerAction(ActionType::ServerBuilt, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
@@ -60,7 +33,7 @@ namespace Backend {
         /**
          * Starts this server.
          */
-        bool Start(){
+        bool Server::Start(){
             ServerAction build = ServerAction(ActionType::ServerStarted, RegisteredClient::Host);
             build.CompleteAction();
             Log.push_back(build);
@@ -78,14 +51,14 @@ namespace Backend {
         /**
          * Request a shutdown from the server.
          */
-        void SendInterruptSignal(){
+        void Server::SendInterruptSignal(){
             Shutdown = true;
         }
         /**
          * Enqueue a new action to the server.
          * @param act Action to enqueue.
          */
-        bool EnqueueAction(ServerAction *act){
+        bool Server::EnqueueAction(ServerAction *act){
             if(ActionQueue.front().ID == act->ID)
                 return false;
             ActionQueue.push(*act);
@@ -95,9 +68,8 @@ namespace Backend {
          * Enact the action at the front of the queue.
          * @return
          */
-        bool EnactAction() {
+        bool Server::EnactAction() {
             ServerAction act;
-
             {
                 lock_guard<std::mutex> guard(ActionQueueMutex);
                 if (ActionQueue.empty()) {
@@ -106,7 +78,6 @@ namespace Backend {
                 act = ActionQueue.front();
                 ActionQueue.pop();
             }
-
             //region Temporary variables
             bool flag=false;
             int index=-1;
@@ -165,11 +136,4 @@ namespace Backend {
             return true;
         }
         //endregion
-
-    private:
-        /**
-         * Used to cause the server to end execution.
-         */
-        bool Shutdown;
-    };
 }// Backend

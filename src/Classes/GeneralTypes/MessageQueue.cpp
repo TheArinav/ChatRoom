@@ -4,22 +4,19 @@
 
 #include <queue>
 #include "Message.h"
+#include "MessageQueue.h"
 
 using std::queue;
 using std::deque;
+using GeneralTypes::MessageQueue;
+using GeneralTypes::Message;
 
 namespace GeneralTypes {
-    class MessageQueue : public queue<Message> {
-    public:
-        /**
-         * Allows to view the contents of the stack.
-         * @return
-         */
-        const deque<Message>& ViewContainer() const {
-            return this->c;
-        }
-
-    private:
-        using queue<Message>::c;
-    };
-} // GeneralTypes
+    /**
+    * Allows to view the contents of the stack.
+    * @return
+    */
+    const deque<Message> &MessageQueue::ViewContainer() {
+        return this->c;
+    }
+}

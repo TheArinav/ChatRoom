@@ -8,9 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/BeckendComms.cpp" "CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.o.d"
-  "/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o.d"
-  "/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/main.cpp" "CMakeFiles/CPP.dir/src/main.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/main.cpp.o.d"
+  "/tmp/ChatRoom/src/Classes/Backend/BackendComms.cpp" "CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o.d"
+  "/tmp/ChatRoom/src/Classes/Backend/RegisteredClient.cpp" "CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o.d"
+  "/tmp/ChatRoom/src/Classes/GeneralTypes/Message.cpp" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o.d"
+  "/tmp/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o.d"
+  "/tmp/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/Classes/GeneralTypes/ServerAction.cpp.o.d"
+  "/tmp/ChatRoom/src/main.cpp" "CMakeFiles/CPP.dir/src/main.cpp.o" "gcc" "CMakeFiles/CPP.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

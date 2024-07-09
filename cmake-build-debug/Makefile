@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.Deqbg4Y2sX/ChatRoom
+CMAKE_SOURCE_DIR = /tmp/ChatRoom
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/ChatRoom/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/ChatRoom/cmake-build-debug/CMakeFiles /tmp/ChatRoom/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/ChatRoom/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,101 @@ CPP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/build
 .PHONY : CPP/fast
 
-src/Classes/Backend/BeckendComms.o: src/Classes/Backend/BeckendComms.cpp.o
-.PHONY : src/Classes/Backend/BeckendComms.o
+src/Classes/Backend/BackendComms.o: src/Classes/Backend/BackendComms.cpp.o
+.PHONY : src/Classes/Backend/BackendComms.o
 
 # target to build an object file
-src/Classes/Backend/BeckendComms.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.o
-.PHONY : src/Classes/Backend/BeckendComms.cpp.o
+src/Classes/Backend/BackendComms.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.o
+.PHONY : src/Classes/Backend/BackendComms.cpp.o
 
-src/Classes/Backend/BeckendComms.i: src/Classes/Backend/BeckendComms.cpp.i
-.PHONY : src/Classes/Backend/BeckendComms.i
+src/Classes/Backend/BackendComms.i: src/Classes/Backend/BackendComms.cpp.i
+.PHONY : src/Classes/Backend/BackendComms.i
 
 # target to preprocess a source file
-src/Classes/Backend/BeckendComms.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.i
-.PHONY : src/Classes/Backend/BeckendComms.cpp.i
+src/Classes/Backend/BackendComms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.i
+.PHONY : src/Classes/Backend/BackendComms.cpp.i
 
-src/Classes/Backend/BeckendComms.s: src/Classes/Backend/BeckendComms.cpp.s
-.PHONY : src/Classes/Backend/BeckendComms.s
+src/Classes/Backend/BackendComms.s: src/Classes/Backend/BackendComms.cpp.s
+.PHONY : src/Classes/Backend/BackendComms.s
 
 # target to generate assembly for a file
-src/Classes/Backend/BeckendComms.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BeckendComms.cpp.s
-.PHONY : src/Classes/Backend/BeckendComms.cpp.s
+src/Classes/Backend/BackendComms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/BackendComms.cpp.s
+.PHONY : src/Classes/Backend/BackendComms.cpp.s
+
+src/Classes/Backend/RegisteredClient.o: src/Classes/Backend/RegisteredClient.cpp.o
+.PHONY : src/Classes/Backend/RegisteredClient.o
+
+# target to build an object file
+src/Classes/Backend/RegisteredClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.o
+.PHONY : src/Classes/Backend/RegisteredClient.cpp.o
+
+src/Classes/Backend/RegisteredClient.i: src/Classes/Backend/RegisteredClient.cpp.i
+.PHONY : src/Classes/Backend/RegisteredClient.i
+
+# target to preprocess a source file
+src/Classes/Backend/RegisteredClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.i
+.PHONY : src/Classes/Backend/RegisteredClient.cpp.i
+
+src/Classes/Backend/RegisteredClient.s: src/Classes/Backend/RegisteredClient.cpp.s
+.PHONY : src/Classes/Backend/RegisteredClient.s
+
+# target to generate assembly for a file
+src/Classes/Backend/RegisteredClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/Backend/RegisteredClient.cpp.s
+.PHONY : src/Classes/Backend/RegisteredClient.cpp.s
+
+src/Classes/GeneralTypes/Message.o: src/Classes/GeneralTypes/Message.cpp.o
+.PHONY : src/Classes/GeneralTypes/Message.o
+
+# target to build an object file
+src/Classes/GeneralTypes/Message.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.o
+.PHONY : src/Classes/GeneralTypes/Message.cpp.o
+
+src/Classes/GeneralTypes/Message.i: src/Classes/GeneralTypes/Message.cpp.i
+.PHONY : src/Classes/GeneralTypes/Message.i
+
+# target to preprocess a source file
+src/Classes/GeneralTypes/Message.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.i
+.PHONY : src/Classes/GeneralTypes/Message.cpp.i
+
+src/Classes/GeneralTypes/Message.s: src/Classes/GeneralTypes/Message.cpp.s
+.PHONY : src/Classes/GeneralTypes/Message.s
+
+# target to generate assembly for a file
+src/Classes/GeneralTypes/Message.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/Message.cpp.s
+.PHONY : src/Classes/GeneralTypes/Message.cpp.s
+
+src/Classes/GeneralTypes/MessageQueue.o: src/Classes/GeneralTypes/MessageQueue.cpp.o
+.PHONY : src/Classes/GeneralTypes/MessageQueue.o
+
+# target to build an object file
+src/Classes/GeneralTypes/MessageQueue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o
+.PHONY : src/Classes/GeneralTypes/MessageQueue.cpp.o
+
+src/Classes/GeneralTypes/MessageQueue.i: src/Classes/GeneralTypes/MessageQueue.cpp.i
+.PHONY : src/Classes/GeneralTypes/MessageQueue.i
+
+# target to preprocess a source file
+src/Classes/GeneralTypes/MessageQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.i
+.PHONY : src/Classes/GeneralTypes/MessageQueue.cpp.i
+
+src/Classes/GeneralTypes/MessageQueue.s: src/Classes/GeneralTypes/MessageQueue.cpp.s
+.PHONY : src/Classes/GeneralTypes/MessageQueue.s
+
+# target to generate assembly for a file
+src/Classes/GeneralTypes/MessageQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP.dir/build.make CMakeFiles/CPP.dir/src/Classes/GeneralTypes/MessageQueue.cpp.s
+.PHONY : src/Classes/GeneralTypes/MessageQueue.cpp.s
 
 src/Classes/GeneralTypes/ServerAction.o: src/Classes/GeneralTypes/ServerAction.cpp.o
 .PHONY : src/Classes/GeneralTypes/ServerAction.o
@@ -210,9 +282,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CPP"
-	@echo "... src/Classes/Backend/BeckendComms.o"
-	@echo "... src/Classes/Backend/BeckendComms.i"
-	@echo "... src/Classes/Backend/BeckendComms.s"
+	@echo "... src/Classes/Backend/BackendComms.o"
+	@echo "... src/Classes/Backend/BackendComms.i"
+	@echo "... src/Classes/Backend/BackendComms.s"
+	@echo "... src/Classes/Backend/RegisteredClient.o"
+	@echo "... src/Classes/Backend/RegisteredClient.i"
+	@echo "... src/Classes/Backend/RegisteredClient.s"
+	@echo "... src/Classes/GeneralTypes/Message.o"
+	@echo "... src/Classes/GeneralTypes/Message.i"
+	@echo "... src/Classes/GeneralTypes/Message.s"
+	@echo "... src/Classes/GeneralTypes/MessageQueue.o"
+	@echo "... src/Classes/GeneralTypes/MessageQueue.i"
+	@echo "... src/Classes/GeneralTypes/MessageQueue.s"
 	@echo "... src/Classes/GeneralTypes/ServerAction.o"
 	@echo "... src/Classes/GeneralTypes/ServerAction.i"
 	@echo "... src/Classes/GeneralTypes/ServerAction.s"
