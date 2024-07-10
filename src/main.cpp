@@ -1,6 +1,8 @@
 #include <iostream>
+#include "Classes/Backend/BackendComms.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Backend::BackendComms::Setup();
+    Backend::BackendComms::Start();
     return 0;
 }
