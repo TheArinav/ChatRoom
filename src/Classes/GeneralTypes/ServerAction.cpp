@@ -70,6 +70,8 @@ namespace GeneralTypes {
 
         // Parse IDs from the string
         vector<int> ids;
+        if(ids_string.empty())
+            return {};
         ids_string = ids_string.substr(1, ids_string.size() - 2); // Remove the surrounding brackets
         std::istringstream ids_stream(ids_string);
         string id_str;

@@ -24,6 +24,11 @@ using GeneralTypes::ServerAction;
 using Backend::BackendComms;
 
 namespace Backend {
+    unique_ptr<Server> BackendComms::HostServer = nullptr;
+    int BackendComms::server_fd = 0;
+    sockaddr_in BackendComms::ServerSocket = {};
+    mutex BackendComms::slMutex;
+    bool BackendComms::stopListen = true;
     bool BackendComms::Setup() {
         bool flag;
         sockaddr_in socket{};
@@ -117,7 +122,6 @@ namespace Backend {
                     lock_guard <mutex> guard(HostServer->ActionQueueMutex);
                     HostServer->ActionQueue.push(action);
                 }
-                std::cout << "Received action: " << action.ToString() << std::endl;
                 close(new_socket);
             }).detach();
         }

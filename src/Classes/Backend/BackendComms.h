@@ -21,6 +21,7 @@ using std::lock_guard;
 using std::make_unique;
 
 namespace Backend {
+
     class BackendComms {
     public:
         /**
@@ -87,13 +88,6 @@ namespace Backend {
          */
         static void handleIncomingConnections();
     };
-
-    // Static member definitions
-    unique_ptr<Server> BackendComms::HostServer = nullptr;
-    int BackendComms::server_fd = 0;
-    sockaddr_in BackendComms::ServerSocket = {};
-    mutex BackendComms::slMutex;
-    bool BackendComms::stopListen = true;
 
 } // namespace Backend
 

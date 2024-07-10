@@ -1,7 +1,7 @@
 #include <vector>
+#include <iostream>
 #include <queue>
 #include <unistd.h>
-#include <iostream>
 #include <mutex>
 #include <algorithm>
 #include <sys/socket.h>
@@ -57,7 +57,6 @@ namespace Backend {
             if (!EnactAction()) {
                 std::cout << "[SERVER]:[ERROR]: Action failed:\n" << last.ToString() << "\n";
                 GenerateResponse(&last, false);
-                return false;
             } else {
                 std::cout << "[SERVER]:[INFO]: Action enacted! details:\n" << Log.back().ToString() << "\n";
                 GenerateResponse(&last, true);
@@ -111,9 +110,10 @@ namespace Backend {
             }
         }
 
-        if (reqInd == -1 || Clients[reqInd].Address.sin_addr.s_addr != act.ActionRequester.Address.sin_addr.s_addr) {
+        if (reqInd != -1 && Clients[reqInd].Address.sin_addr.s_addr != act.ActionRequester.Address.sin_addr.s_addr) {
             std::cout << "[SERVER]:[WARNING]: Attempted impersonation detected! By client with address:\n\t"
-                      << act.ActionRequester.Address.sin_addr.s_addr;
+                      << act.ActionRequester.Address.sin_addr.s_addr << ":" << Clients[reqInd].Address.sin_addr.s_addr
+                      << "\n";
             return false;
         }
         //endregion
@@ -135,6 +135,7 @@ namespace Backend {
                 if (flag) {
                     return false;
                 }
+
                 LastTouched = RegisteredClient(newCl);
                 Clients.push_back(newCl);
                 break;
