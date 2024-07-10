@@ -14,6 +14,7 @@
 #include "RegisteredClient.h"
 #include "ChatRoomHost.h"
 #include "../GeneralTypes/ServerAction.h"
+#include "../GeneralTypes/ClientAction.h"
 
 using std::vector;
 using std::queue;
@@ -22,6 +23,7 @@ using GeneralTypes::Message;
 using Backend::RegisteredClient;
 using Backend::ChatRoomHost;
 using GeneralTypes::ServerAction;
+using GeneralTypes::ClientAction;
 
 namespace Backend {
     class Server{
@@ -51,6 +53,10 @@ namespace Backend {
          * Used to ensure the ActionQueue is ThreadSafe.
          */
         mutex ActionQueueMutex;
+        /**
+         * Used to respond to the clients.
+         */
+        vector<ClientAction> Responses;
         //endregion
 
         /**
@@ -77,6 +83,14 @@ namespace Backend {
          * @return
          */
         bool EnactAction();
+        /**
+         * Generates a new response to a server action.
+         */
+        void GenerateResponse(ServerAction *act, bool Success);
+        /**
+         * Attempts to launch all responses.
+         */
+        void RollResponses();
         //endregion
 
     private:

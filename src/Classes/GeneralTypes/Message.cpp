@@ -14,6 +14,6 @@ namespace GeneralTypes{
     * @param TargetChatRoomID Logical identifier of recipient chat room.
     * @param Contents Message contents.
      */
-     Message::Message(unsigned long ClientID,unsigned long TargetChatRoomID,string Contents) : ID(count++), ClientID(ClientID), TargetChatRoomID(TargetChatRoomID), Contents(move(Contents)) {}
+     Message::Message(unsigned long long ClientID,unsigned long long TargetChatRoomID,string Contents) : ID(count++), ClientID(ClientID), TargetChatRoomID(TargetChatRoomID), Contents(move(Contents)) {}
      //endregion
 }

@@ -18,7 +18,7 @@ namespace Backend {
      * @param creatorID Logical id of the creator client.
      * @param roomName Display name for the room.
      */
-    ChatRoomHost::ChatRoomHost(unsigned long creatorID, string roomName)
+    ChatRoomHost::ChatRoomHost(unsigned long long creatorID, string roomName)
             : ID(count++), CreatorID(creatorID), RoomName(roomName) {}
     //endregion
 
@@ -111,7 +111,7 @@ namespace Backend {
      * @return Whether the message was found.
      */
     bool ChatRoomHost::SearchMessage(Message *msg) {
-        unsigned long id = msg->ID;
+        unsigned long long id = msg->ID;
         bool isFound = false;
         for (int i = 0; i < MessageList.size(); isFound = (MessageList[i++]->ID == id));
         return isFound;
@@ -122,7 +122,7 @@ namespace Backend {
      * @param id Client member ID to search.
      * @return Whether the client was found.
      */
-    bool ChatRoomHost::SearchMember(unsigned long id) {
+    bool ChatRoomHost::SearchMember(unsigned long long id) {
         bool isFound = false;
         for (int i = 0; i < Members.size(); isFound = (Members[i++]->ID == id));
         return isFound;
@@ -133,7 +133,7 @@ namespace Backend {
      * @param id Client id to search.
      * @return Whether the client was found in the managers list.
      */
-    bool ChatRoomHost::SearchManager(unsigned long id) {
+    bool ChatRoomHost::SearchManager(unsigned long long id) {
         bool isFound = false;
         for (int i = 0; i < Managers.size(); isFound = (Managers[i++]->ID == id));
         return isFound;
@@ -147,7 +147,7 @@ namespace Backend {
      * @return The message index.
      * @warning Returns -1 if the message was not found.
      */
-    int ChatRoomHost::FindMessage(unsigned long id) {
+    int ChatRoomHost::FindMessage(unsigned long long id) {
         int index = -1;
         for (int i = 0; i < Managers.size(); index = (MessageList[i++]->ID == id) ? i : index);
         return index;
@@ -159,7 +159,7 @@ namespace Backend {
      * @return The member index.
      * @warning Returns -1 if the member was not found.
      */
-    int ChatRoomHost::FindMember(unsigned long id) {
+    int ChatRoomHost::FindMember(unsigned long long id) {
         int index = -1;
         for (int i = 0; i < Members.size(); index = (Members[i++]->ID == id) ? i : index);
         return index;
@@ -171,7 +171,7 @@ namespace Backend {
      * @return The manager member index.
      * @warning Returns -1 if the manager member was not found.
      */
-    int ChatRoomHost::FindManager(unsigned long id) {
+    int ChatRoomHost::FindManager(unsigned long long id) {
         int index = -1;
         for (int i = 0; i < Managers.size(); index = (Managers[i++]->ID == id) ? i : index);
         return index;

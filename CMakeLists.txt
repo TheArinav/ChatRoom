@@ -4,7 +4,7 @@ project(ChatRoomServer)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CPP
+add_executable(ChatRoomServer
         src/main.cpp
         src/Classes/GeneralTypes/ServerAction.cpp
         src/Classes/GeneralTypes/ServerAction.h
@@ -27,7 +27,7 @@ add_executable(CPP
         )
 
 find_package(Threads REQUIRED)
-target_link_libraries(CPP PRIVATE Threads::Threads pthread)
+target_link_libraries(ChatRoomServer PRIVATE Threads::Threads pthread)
 
 # Optional: Set compiler and linker flags explicitly
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")

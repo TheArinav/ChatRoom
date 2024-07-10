@@ -21,6 +21,7 @@ namespace GeneralTypes {
     };
     class ClientAction {
     public:
+        //region Properties
         /**
          * Type of the action.
          */
@@ -34,6 +35,31 @@ namespace GeneralTypes {
          * @note This parameter will not be included when serializing.
          */
         sockaddr_in RecipientAddress;
+        //endregion
+        //region Constructors
+        /**
+         * Create an empty ClientAction
+         */
+        ClientAction();
+        /**
+         * Create a new instance of a ClientAction
+         */
+        ClientAction(ClientActionType,string ,sockaddr_in={});
+        //endregion
+        //region Methods
+        /**
+         * Serialize this ClientAction into a human-readable format.
+         */
+        string ToString();
+        /**
+         * Serialize this ClientAction to be transferred through a socket.
+         */
+        string Serialize();
+        /**
+         * Transform a string back into a ClientAction object.
+         */
+        static ClientAction Deserialize(string);
+        //endregion
     };
 
 } // GeneralTypes

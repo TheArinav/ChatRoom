@@ -38,7 +38,7 @@ namespace GeneralTypes {
         /**
          * Logical ID of the action.
          */
-        unsigned long ID;
+        unsigned long long ID;
 
         /**
          * Client who requested the action.
@@ -61,7 +61,7 @@ namespace GeneralTypes {
         /**
          * Used to store logical identifiers of Messages/Clients/Rooms.
          */
-        vector<unsigned long> IDs;
+        vector<unsigned long long> IDs;
         /**
          * Used to store ChatRoom/Client names or Message contents
          */

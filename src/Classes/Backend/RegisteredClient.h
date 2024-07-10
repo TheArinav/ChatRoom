@@ -26,7 +26,7 @@ namespace Backend {
         /**
          * Logical identifier of client.
          */
-        unsigned long ID{};
+        unsigned long long ID{};
         /**
          * @brief Client name to be displayed to users.
          */

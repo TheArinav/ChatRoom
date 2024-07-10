@@ -29,12 +29,12 @@ namespace GeneralTypes {
     string ServerAction::ToString() const {
         std::stringstream ss;
         ss << "ServerAction { "
-        << "Type: " << static_cast<int>(Type) << ", "
-        << "ID: " << ID << ", "
-        << "ActionRequester: " <<  to_string(ActionRequester.ID) + " " + ActionRequester.DisplayName << ", "
-        << "TimeRegistered: " << std::ctime(&TimeRegistered) << ","
-        << "TimeComplete: " << (std::ctime(&TimeComplete))
-        << " }";
+        << "\n\tType: " << static_cast<int>(Type) << ", "
+        << "\n\tID: " << ID << ", "
+        << "\n\tActionRequester: " <<  to_string(ActionRequester.ID) + " " + ActionRequester.DisplayName << ", "
+        << "\n\tTimeRegistered: " << std::ctime(&TimeRegistered) << ","
+        << "\n\tTimeComplete: " << (std::ctime(&TimeComplete))
+        << "\n}";
         return ss.str();
     }
     string ServerAction::Serialize() const{
@@ -57,7 +57,7 @@ namespace GeneralTypes {
     ServerAction ServerAction::Deserialize(const string& data) {
         std::istringstream iss(data);
         int type;
-        unsigned long id;
+        unsigned long long id;
         RegisteredClient requester;
         string ids_string, util;
         iss >> type >> id

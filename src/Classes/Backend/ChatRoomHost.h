@@ -15,7 +15,7 @@ namespace Backend {
         /**
          * @brief The logical ID of the ChatRoomHost instance.
          */
-        unsigned long ID;
+        unsigned long long ID;
         /**
          * @breif Display name for the ChatRoomHost instance.
          */
@@ -23,7 +23,7 @@ namespace Backend {
         /**
          * @brief The logical ID of the primary owner of the ChatRoomHost instance.
          */
-        unsigned long CreatorID;
+        unsigned long long CreatorID;
 
         /**
          * @brief The secondary owners of the ChatRoomHost instance.
@@ -47,7 +47,7 @@ namespace Backend {
          * @param creatorID Logical id of the creator client.
          * @param roomName Display name for the room.
          */
-        ChatRoomHost(unsigned long creatorID, string roomName);
+        ChatRoomHost(unsigned long long creatorID, string roomName);
         //endregion
 
         //region 'Add' Methods
@@ -115,14 +115,14 @@ namespace Backend {
          * @param id Client member ID to search.
          * @return Whether the client was found.
          */
-        bool SearchMember(unsigned long id);
+        bool SearchMember(unsigned long long id);
 
         /**
          * Check if a client is registered as a manager member of this chatroom.
          * @param id Client ID to search.
          * @return Whether the client was found in the managers list.
          */
-        bool SearchManager(unsigned long id);
+        bool SearchManager(unsigned long long id);
         //endregion
 
         //region 'Find' Methods
@@ -132,7 +132,7 @@ namespace Backend {
          * @return The message index.
          * @warning Returns -1 if the message was not found.
          */
-        int FindMessage(unsigned long id);
+        int FindMessage(unsigned long long id);
 
         /**
          * Given that a member exists, find the index where its pointer is stored in the vector.
@@ -140,7 +140,7 @@ namespace Backend {
          * @return The member index.
          * @warning Returns -1 if the member was not found.
          */
-        int FindMember(unsigned long id);
+        int FindMember(unsigned long long id);
 
         /**
          * Given that a manager member exists, find the index where its pointer is stored in the vector.
@@ -148,7 +148,7 @@ namespace Backend {
          * @return The manager member index.
          * @warning Returns -1 if the manager member was not found.
          */
-        int FindManager(unsigned long id);
+        int FindManager(unsigned long long id);
         //endregion
     };
 } // namespace Backend

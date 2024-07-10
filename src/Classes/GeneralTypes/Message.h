@@ -17,15 +17,15 @@ namespace GeneralTypes {
         /**
         * Logical identifier of a Message object.
         */
-        unsigned long ID;
+        unsigned long long ID;
         /**
          * Logical identifier of message sender.
          */
-        unsigned long ClientID;
+        unsigned long long ClientID;
         /**
          * Logical identifier of recipient chat room.
          */
-        unsigned long TargetChatRoomID;
+        unsigned long long TargetChatRoomID;
         /**
          * The content of the Message.
          */
@@ -43,7 +43,7 @@ namespace GeneralTypes {
          * @param TargetChatRoomID Logical identifier of recipient chat room.
          * @param Contents Message contents.
          */
-        Message(unsigned long ClientID,unsigned long TargetChatRoomID,string Contents);
+        Message(unsigned long long ClientID,unsigned long long TargetChatRoomID,string Contents);
         //endregion
     private:
         /**

@@ -42,7 +42,7 @@ namespace Backend {
                 auto last = ActionQueue.front();
                 if(!EnactAction())
                 {
-                    std::cout << "[SERVER]:[ERROR]: Action failed";
+                    std::cout << "[SERVER]:[ERROR]: Action failed:\n" << last.ToString() << "\n";
                     return false;
                 }
                 else
@@ -191,7 +191,7 @@ namespace Backend {
                         return false;
                     vector<RegisteredClient*> toPush;
                     int rI=index;
-                    for(unsigned long ID : act.IDs){
+                    for(unsigned long long ID : act.IDs){
                         index=-1;
                         for(int j=0; j<Clients.size() && !(index+1); index=(Clients[j++].ID==ID)?j:index);
                         toPush.push_back(&Clients[index]);
@@ -211,7 +211,7 @@ namespace Backend {
                         return false;
                     vector<RegisteredClient*> toErase;
                     int rI=index;
-                    for(unsigned long ID : act.IDs){
+                    for(unsigned long long ID : act.IDs){
                         index=-1;
                         for(int j=0; j<Clients.size() && !(index+1); index=(Clients[j++].ID==ID)?j:index);
                         toErase.push_back(&Clients[index]);
@@ -284,5 +284,13 @@ namespace Backend {
 
             return true;
         }
-        //endregion
+
+    void Server::GenerateResponse(ServerAction *act, bool Success) {
+
+    }
+
+    void Server::RollResponses() {
+
+    }
+    //endregion
 }// Backend
