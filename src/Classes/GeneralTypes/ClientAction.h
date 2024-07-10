@@ -4,20 +4,23 @@
 
 #ifndef CHATROOMSERVER_CLIENTACTION_H
 #define CHATROOMSERVER_CLIENTACTION_H
+
 #include <string>
 #include <netinet/in.h>
+#include "StreamableString.h"
 
 using std::string;
+using GeneralTypes::StreamableString;
 
 namespace GeneralTypes {
-    enum class ClientActionType{
+    enum class ClientActionType {
         InformFailure,
         InformSuccess,
-        ReceiveMessage,
-        JoinRoom,
+        ReceivedMessage,
+        JoinedRoom,
         Promoted,
         Demoted,
-        LeaveRoom
+        LeftRoom
     };
     class ClientAction {
     public:
@@ -29,7 +32,7 @@ namespace GeneralTypes {
         /**
          * Data to transfer.
          */
-        string Data;
+        StreamableString Data;
         /**
          * Notes the target address.
          * @note This parameter will not be included when serializing.
@@ -41,20 +44,23 @@ namespace GeneralTypes {
          * Create an empty ClientAction
          */
         ClientAction();
+
         /**
          * Create a new instance of a ClientAction
          */
-        ClientAction(ClientActionType,string ,sockaddr_in={});
+        ClientAction(ClientActionType, const string&, sockaddr_in= {});
         //endregion
         //region Methods
         /**
          * Serialize this ClientAction into a human-readable format.
          */
         string ToString();
+
         /**
          * Serialize this ClientAction to be transferred through a socket.
          */
         string Serialize();
+
         /**
          * Transform a string back into a ClientAction object.
          */

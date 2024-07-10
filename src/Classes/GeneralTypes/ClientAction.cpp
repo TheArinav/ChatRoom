@@ -1,7 +1,6 @@
 #include "ClientAction.h"
 #include <string>
 #include <sstream>
-
 #include <utility>
 
 using std::stringstream;
@@ -13,14 +12,14 @@ namespace GeneralTypes {
     ClientAction::ClientAction():
     Type(ClientActionType::InformFailure),Data(), RecipientAddress(){}
 
-    ClientAction::ClientAction(ClientActionType type, string data, sockaddr_in addr) :
-    Type(type),Data(move(data)), RecipientAddress(addr){}
+    ClientAction::ClientAction(ClientActionType type, const string& data, sockaddr_in addr) :
+    Type(type),Data(data), RecipientAddress(addr){}
 
     string ClientAction::ToString() {
         stringstream ss;
         ss << "ClientAction: {"
         << "\n\tType: " << static_cast<int>(Type)
-        << "\n\tData: " << Data
+        << "\n\tData: " << (string)Data
         << "\n\tRecipientAddress: " << RecipientAddress.sin_addr.s_addr
         << "\n}";
         return ss.str();
@@ -33,7 +32,7 @@ namespace GeneralTypes {
         << RecipientAddress.sin_port << " "
         << RecipientAddress.sin_zero << " "
         << RecipientAddress.sin_family << " "
-        << Data;
+        << (string)Data;
         return ss.str();
     }
 
@@ -53,7 +52,7 @@ namespace GeneralTypes {
 
         res.Type=static_cast<ClientActionType>(type);
         res.RecipientAddress=addr;
-        res.Data=move(data);
+        res.Data+=data;
 
         return res;
     }

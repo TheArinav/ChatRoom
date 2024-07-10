@@ -10,6 +10,7 @@
 #include <netinet/in.h>
 #include <queue>
 #include <mutex>
+#include <any>
 #include "../GeneralTypes/Message.h"
 #include "RegisteredClient.h"
 #include "ChatRoomHost.h"
@@ -19,6 +20,7 @@
 using std::vector;
 using std::queue;
 using std::mutex;
+using std::any;
 using GeneralTypes::Message;
 using Backend::RegisteredClient;
 using Backend::ChatRoomHost;
@@ -26,7 +28,7 @@ using GeneralTypes::ServerAction;
 using GeneralTypes::ClientAction;
 
 namespace Backend {
-    class Server{
+    class Server {
     public:
         //region Properties
         /**
@@ -68,25 +70,30 @@ namespace Backend {
          * Starts this server.
          */
         bool Start();
+
         /**
          * Request a shutdown from the server.
          */
         void SendInterruptSignal();
+
         /**
          * Enqueue a new action to the server.
          * @param act Action to enqueue.
          * @return whether the action was successfully enqueued.
          */
         bool EnqueueAction(ServerAction *act);
+
         /**
          * Enact the action at the front of the queue.
          * @return
          */
         bool EnactAction();
+
         /**
          * Generates a new response to a server action.
          */
         void GenerateResponse(ServerAction *act, bool Success);
+
         /**
          * Attempts to launch all responses.
          */
@@ -98,6 +105,13 @@ namespace Backend {
          * Used to cause the server to end execution.
          */
         bool Shutdown;
+        /**
+         * The last object that was touched by a ServerAction.
+         */
+        any LastTouched;
+
+        static std::vector<RegisteredClient *>
+        SetSubtractionMembers(const std::vector<RegisteredClient *> &vec1, const std::vector<RegisteredClient *> &vec2);
     };
 } // Backend
 

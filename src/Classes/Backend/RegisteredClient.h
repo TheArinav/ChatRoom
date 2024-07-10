@@ -65,6 +65,18 @@ namespace Backend {
          * Update the LastActivity time to the current.
          */
         void UpdateTime();
+        //region Operator Overloads
+        bool operator<(const RegisteredClient& other) const {
+            return ID < other.ID;
+        }
+        bool operator>(const RegisteredClient& other) const {
+            return ID > other.ID;
+        }
+        bool operator==(const RegisteredClient& other) const {
+            return ID == other.ID;
+        }
+        //endregion
+
         //endregion
         /*!
          * Stores number of created users. Used to assign IDs.
