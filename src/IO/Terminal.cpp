@@ -19,10 +19,10 @@ namespace IO::Terminal{
  | |       \_____/ |_| |_| \___^._\ \____|  [=]      | |
  | |_________________________________________________| |
  | |                                                 | |
- | |   Welcome to the "Chat!" App                    | |
+ | |   Welcome to the "Chat!" App.                   | |
  | |_________________________________________________| |
  | |                 (c)                             | |
- | |   Copyright 2024   Ariel Ayalon                 | |
+ | |   Copyright 2024   Ariel Ayalon.                | |
  | |_________________________________________________| |
  | |                                                 | |
  | |   Please select an action. For help, type 'h'.  | |
@@ -43,7 +43,7 @@ namespace IO::Terminal{
         while (true) {
             std::cout << "  '---> ";
             std::getline(std::cin, input);
-            if (input == "exit") break;
+            if (input == "exit" || input == "q") break;
             else if (input == "cls" || input == "clear") {
                 clearTerminal();
                 PrintLogo();

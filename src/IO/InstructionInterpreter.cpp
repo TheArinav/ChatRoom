@@ -6,7 +6,7 @@ namespace IO {
 
     void InstructionInterpreter::Setup() {
         vector<string> list = {
-                "-1:h/help|general,server,client",
+                "-1:h/help|",
                 "-1:q/exit|",
                 "-1:scx/show-context|",
                 "-1:ecx/exit-context|",
