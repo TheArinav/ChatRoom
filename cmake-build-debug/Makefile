@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ChatRoomServer
+# Target rules for targets named ChatApp
 
 # Build rule for target.
-ChatRoomServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ChatRoomServer
-.PHONY : ChatRoomServer
+ChatApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ChatApp
+.PHONY : ChatApp
 
 # fast build rule for target.
-ChatRoomServer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/build
-.PHONY : ChatRoomServer/fast
+ChatApp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/build
+.PHONY : ChatApp/fast
 
 src/Classes/Backend/BackendComms.o: src/Classes/Backend/BackendComms.cpp.o
 .PHONY : src/Classes/Backend/BackendComms.o
 
 # target to build an object file
 src/Classes/Backend/BackendComms.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/BackendComms.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o
 .PHONY : src/Classes/Backend/BackendComms.cpp.o
 
 src/Classes/Backend/BackendComms.i: src/Classes/Backend/BackendComms.cpp.i
@@ -142,7 +142,7 @@ src/Classes/Backend/BackendComms.i: src/Classes/Backend/BackendComms.cpp.i
 
 # target to preprocess a source file
 src/Classes/Backend/BackendComms.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/BackendComms.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.i
 .PHONY : src/Classes/Backend/BackendComms.cpp.i
 
 src/Classes/Backend/BackendComms.s: src/Classes/Backend/BackendComms.cpp.s
@@ -150,7 +150,7 @@ src/Classes/Backend/BackendComms.s: src/Classes/Backend/BackendComms.cpp.s
 
 # target to generate assembly for a file
 src/Classes/Backend/BackendComms.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/BackendComms.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.s
 .PHONY : src/Classes/Backend/BackendComms.cpp.s
 
 src/Classes/Backend/ChatRoomHost.o: src/Classes/Backend/ChatRoomHost.cpp.o
@@ -158,7 +158,7 @@ src/Classes/Backend/ChatRoomHost.o: src/Classes/Backend/ChatRoomHost.cpp.o
 
 # target to build an object file
 src/Classes/Backend/ChatRoomHost.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/ChatRoomHost.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o
 .PHONY : src/Classes/Backend/ChatRoomHost.cpp.o
 
 src/Classes/Backend/ChatRoomHost.i: src/Classes/Backend/ChatRoomHost.cpp.i
@@ -166,7 +166,7 @@ src/Classes/Backend/ChatRoomHost.i: src/Classes/Backend/ChatRoomHost.cpp.i
 
 # target to preprocess a source file
 src/Classes/Backend/ChatRoomHost.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/ChatRoomHost.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.i
 .PHONY : src/Classes/Backend/ChatRoomHost.cpp.i
 
 src/Classes/Backend/ChatRoomHost.s: src/Classes/Backend/ChatRoomHost.cpp.s
@@ -174,7 +174,7 @@ src/Classes/Backend/ChatRoomHost.s: src/Classes/Backend/ChatRoomHost.cpp.s
 
 # target to generate assembly for a file
 src/Classes/Backend/ChatRoomHost.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/ChatRoomHost.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.s
 .PHONY : src/Classes/Backend/ChatRoomHost.cpp.s
 
 src/Classes/Backend/RegisteredClient.o: src/Classes/Backend/RegisteredClient.cpp.o
@@ -182,7 +182,7 @@ src/Classes/Backend/RegisteredClient.o: src/Classes/Backend/RegisteredClient.cpp
 
 # target to build an object file
 src/Classes/Backend/RegisteredClient.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/RegisteredClient.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o
 .PHONY : src/Classes/Backend/RegisteredClient.cpp.o
 
 src/Classes/Backend/RegisteredClient.i: src/Classes/Backend/RegisteredClient.cpp.i
@@ -190,7 +190,7 @@ src/Classes/Backend/RegisteredClient.i: src/Classes/Backend/RegisteredClient.cpp
 
 # target to preprocess a source file
 src/Classes/Backend/RegisteredClient.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/RegisteredClient.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.i
 .PHONY : src/Classes/Backend/RegisteredClient.cpp.i
 
 src/Classes/Backend/RegisteredClient.s: src/Classes/Backend/RegisteredClient.cpp.s
@@ -198,7 +198,7 @@ src/Classes/Backend/RegisteredClient.s: src/Classes/Backend/RegisteredClient.cpp
 
 # target to generate assembly for a file
 src/Classes/Backend/RegisteredClient.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/RegisteredClient.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.s
 .PHONY : src/Classes/Backend/RegisteredClient.cpp.s
 
 src/Classes/Backend/Server.o: src/Classes/Backend/Server.cpp.o
@@ -206,7 +206,7 @@ src/Classes/Backend/Server.o: src/Classes/Backend/Server.cpp.o
 
 # target to build an object file
 src/Classes/Backend/Server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/Server.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o
 .PHONY : src/Classes/Backend/Server.cpp.o
 
 src/Classes/Backend/Server.i: src/Classes/Backend/Server.cpp.i
@@ -214,7 +214,7 @@ src/Classes/Backend/Server.i: src/Classes/Backend/Server.cpp.i
 
 # target to preprocess a source file
 src/Classes/Backend/Server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/Server.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.i
 .PHONY : src/Classes/Backend/Server.cpp.i
 
 src/Classes/Backend/Server.s: src/Classes/Backend/Server.cpp.s
@@ -222,7 +222,7 @@ src/Classes/Backend/Server.s: src/Classes/Backend/Server.cpp.s
 
 # target to generate assembly for a file
 src/Classes/Backend/Server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/Server.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.s
 .PHONY : src/Classes/Backend/Server.cpp.s
 
 src/Classes/Frontend/Account.o: src/Classes/Frontend/Account.cpp.o
@@ -230,7 +230,7 @@ src/Classes/Frontend/Account.o: src/Classes/Frontend/Account.cpp.o
 
 # target to build an object file
 src/Classes/Frontend/Account.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Frontend/Account.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o
 .PHONY : src/Classes/Frontend/Account.cpp.o
 
 src/Classes/Frontend/Account.i: src/Classes/Frontend/Account.cpp.i
@@ -238,7 +238,7 @@ src/Classes/Frontend/Account.i: src/Classes/Frontend/Account.cpp.i
 
 # target to preprocess a source file
 src/Classes/Frontend/Account.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Frontend/Account.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.i
 .PHONY : src/Classes/Frontend/Account.cpp.i
 
 src/Classes/Frontend/Account.s: src/Classes/Frontend/Account.cpp.s
@@ -246,7 +246,7 @@ src/Classes/Frontend/Account.s: src/Classes/Frontend/Account.cpp.s
 
 # target to generate assembly for a file
 src/Classes/Frontend/Account.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/Frontend/Account.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.s
 .PHONY : src/Classes/Frontend/Account.cpp.s
 
 src/Classes/GeneralTypes/ClientAction.o: src/Classes/GeneralTypes/ClientAction.cpp.o
@@ -254,7 +254,7 @@ src/Classes/GeneralTypes/ClientAction.o: src/Classes/GeneralTypes/ClientAction.c
 
 # target to build an object file
 src/Classes/GeneralTypes/ClientAction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o
 .PHONY : src/Classes/GeneralTypes/ClientAction.cpp.o
 
 src/Classes/GeneralTypes/ClientAction.i: src/Classes/GeneralTypes/ClientAction.cpp.i
@@ -262,7 +262,7 @@ src/Classes/GeneralTypes/ClientAction.i: src/Classes/GeneralTypes/ClientAction.c
 
 # target to preprocess a source file
 src/Classes/GeneralTypes/ClientAction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.i
 .PHONY : src/Classes/GeneralTypes/ClientAction.cpp.i
 
 src/Classes/GeneralTypes/ClientAction.s: src/Classes/GeneralTypes/ClientAction.cpp.s
@@ -270,7 +270,7 @@ src/Classes/GeneralTypes/ClientAction.s: src/Classes/GeneralTypes/ClientAction.c
 
 # target to generate assembly for a file
 src/Classes/GeneralTypes/ClientAction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.s
 .PHONY : src/Classes/GeneralTypes/ClientAction.cpp.s
 
 src/Classes/GeneralTypes/Message.o: src/Classes/GeneralTypes/Message.cpp.o
@@ -278,7 +278,7 @@ src/Classes/GeneralTypes/Message.o: src/Classes/GeneralTypes/Message.cpp.o
 
 # target to build an object file
 src/Classes/GeneralTypes/Message.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/Message.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o
 .PHONY : src/Classes/GeneralTypes/Message.cpp.o
 
 src/Classes/GeneralTypes/Message.i: src/Classes/GeneralTypes/Message.cpp.i
@@ -286,7 +286,7 @@ src/Classes/GeneralTypes/Message.i: src/Classes/GeneralTypes/Message.cpp.i
 
 # target to preprocess a source file
 src/Classes/GeneralTypes/Message.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/Message.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.i
 .PHONY : src/Classes/GeneralTypes/Message.cpp.i
 
 src/Classes/GeneralTypes/Message.s: src/Classes/GeneralTypes/Message.cpp.s
@@ -294,7 +294,7 @@ src/Classes/GeneralTypes/Message.s: src/Classes/GeneralTypes/Message.cpp.s
 
 # target to generate assembly for a file
 src/Classes/GeneralTypes/Message.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/Message.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.s
 .PHONY : src/Classes/GeneralTypes/Message.cpp.s
 
 src/Classes/GeneralTypes/MessageQueue.o: src/Classes/GeneralTypes/MessageQueue.cpp.o
@@ -302,7 +302,7 @@ src/Classes/GeneralTypes/MessageQueue.o: src/Classes/GeneralTypes/MessageQueue.c
 
 # target to build an object file
 src/Classes/GeneralTypes/MessageQueue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o
 .PHONY : src/Classes/GeneralTypes/MessageQueue.cpp.o
 
 src/Classes/GeneralTypes/MessageQueue.i: src/Classes/GeneralTypes/MessageQueue.cpp.i
@@ -310,7 +310,7 @@ src/Classes/GeneralTypes/MessageQueue.i: src/Classes/GeneralTypes/MessageQueue.c
 
 # target to preprocess a source file
 src/Classes/GeneralTypes/MessageQueue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/MessageQueue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.i
 .PHONY : src/Classes/GeneralTypes/MessageQueue.cpp.i
 
 src/Classes/GeneralTypes/MessageQueue.s: src/Classes/GeneralTypes/MessageQueue.cpp.s
@@ -318,7 +318,7 @@ src/Classes/GeneralTypes/MessageQueue.s: src/Classes/GeneralTypes/MessageQueue.c
 
 # target to generate assembly for a file
 src/Classes/GeneralTypes/MessageQueue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/MessageQueue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.s
 .PHONY : src/Classes/GeneralTypes/MessageQueue.cpp.s
 
 src/Classes/GeneralTypes/ServerAction.o: src/Classes/GeneralTypes/ServerAction.cpp.o
@@ -326,7 +326,7 @@ src/Classes/GeneralTypes/ServerAction.o: src/Classes/GeneralTypes/ServerAction.c
 
 # target to build an object file
 src/Classes/GeneralTypes/ServerAction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ServerAction.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o
 .PHONY : src/Classes/GeneralTypes/ServerAction.cpp.o
 
 src/Classes/GeneralTypes/ServerAction.i: src/Classes/GeneralTypes/ServerAction.cpp.i
@@ -334,7 +334,7 @@ src/Classes/GeneralTypes/ServerAction.i: src/Classes/GeneralTypes/ServerAction.c
 
 # target to preprocess a source file
 src/Classes/GeneralTypes/ServerAction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ServerAction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.i
 .PHONY : src/Classes/GeneralTypes/ServerAction.cpp.i
 
 src/Classes/GeneralTypes/ServerAction.s: src/Classes/GeneralTypes/ServerAction.cpp.s
@@ -342,15 +342,63 @@ src/Classes/GeneralTypes/ServerAction.s: src/Classes/GeneralTypes/ServerAction.c
 
 # target to generate assembly for a file
 src/Classes/GeneralTypes/ServerAction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ServerAction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.s
 .PHONY : src/Classes/GeneralTypes/ServerAction.cpp.s
+
+src/IO/InstructionInterpreter.o: src/IO/InstructionInterpreter.cpp.o
+.PHONY : src/IO/InstructionInterpreter.o
+
+# target to build an object file
+src/IO/InstructionInterpreter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o
+.PHONY : src/IO/InstructionInterpreter.cpp.o
+
+src/IO/InstructionInterpreter.i: src/IO/InstructionInterpreter.cpp.i
+.PHONY : src/IO/InstructionInterpreter.i
+
+# target to preprocess a source file
+src/IO/InstructionInterpreter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.i
+.PHONY : src/IO/InstructionInterpreter.cpp.i
+
+src/IO/InstructionInterpreter.s: src/IO/InstructionInterpreter.cpp.s
+.PHONY : src/IO/InstructionInterpreter.s
+
+# target to generate assembly for a file
+src/IO/InstructionInterpreter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.s
+.PHONY : src/IO/InstructionInterpreter.cpp.s
+
+src/IO/Terminal.o: src/IO/Terminal.cpp.o
+.PHONY : src/IO/Terminal.o
+
+# target to build an object file
+src/IO/Terminal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o
+.PHONY : src/IO/Terminal.cpp.o
+
+src/IO/Terminal.i: src/IO/Terminal.cpp.i
+.PHONY : src/IO/Terminal.i
+
+# target to preprocess a source file
+src/IO/Terminal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.i
+.PHONY : src/IO/Terminal.cpp.i
+
+src/IO/Terminal.s: src/IO/Terminal.cpp.s
+.PHONY : src/IO/Terminal.s
+
+# target to generate assembly for a file
+src/IO/Terminal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.s
+.PHONY : src/IO/Terminal.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -358,7 +406,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -366,7 +414,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatRoomServer.dir/build.make CMakeFiles/ChatRoomServer.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -377,7 +425,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ChatRoomServer"
+	@echo "... ChatApp"
 	@echo "... src/Classes/Backend/BackendComms.o"
 	@echo "... src/Classes/Backend/BackendComms.i"
 	@echo "... src/Classes/Backend/BackendComms.s"
@@ -405,6 +453,12 @@ help:
 	@echo "... src/Classes/GeneralTypes/ServerAction.o"
 	@echo "... src/Classes/GeneralTypes/ServerAction.i"
 	@echo "... src/Classes/GeneralTypes/ServerAction.s"
+	@echo "... src/IO/InstructionInterpreter.o"
+	@echo "... src/IO/InstructionInterpreter.i"
+	@echo "... src/IO/InstructionInterpreter.s"
+	@echo "... src/IO/Terminal.o"
+	@echo "... src/IO/Terminal.i"
+	@echo "... src/IO/Terminal.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

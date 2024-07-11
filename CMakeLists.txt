@@ -5,7 +5,7 @@ project(ChatRoomServer)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-add_executable(ChatRoomServer
+add_executable(ChatApp
         src/main.cpp
         src/Classes/GeneralTypes/ServerAction.cpp
         src/Classes/GeneralTypes/ServerAction.h
@@ -25,10 +25,10 @@ add_executable(ChatRoomServer
         src/Classes/Frontend/Account.h
         src/Classes/GeneralTypes/ClientAction.cpp
         src/Classes/GeneralTypes/ClientAction.h
-        )
+        src/IO/Terminal.cpp src/IO/Terminal.h src/IO/InstructionInterpreter.cpp src/IO/InstructionInterpreter.h)
 
 find_package(Threads REQUIRED)
-target_link_libraries(ChatRoomServer PRIVATE Threads::Threads pthread)
+target_link_libraries(ChatApp PRIVATE Threads::Threads pthread)
 
 # Optional: Set compiler and linker flags explicitly
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")

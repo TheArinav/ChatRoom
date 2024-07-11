@@ -17,8 +17,8 @@
 					<DistClean command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="ChatRoomServer">
-				<Option output="/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/ChatRoomServer" prefix_auto="0" extension_auto="0"/>
+			<Target title="ChatApp">
+				<Option output="/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/ChatApp" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -33,14 +33,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 ChatRoomServer"/>
+					<Build command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 ChatApp"/>
 					<CompileFile command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="ChatRoomServer/fast">
-				<Option output="/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/ChatRoomServer" prefix_auto="0" extension_auto="0"/>
+			<Target title="ChatApp/fast">
+				<Option output="/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/ChatApp" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -55,7 +55,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 ChatRoomServer/fast"/>
+					<Build command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 ChatApp/fast"/>
 					<CompileFile command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j3 -f &quot;/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,61 +83,73 @@
 			</Target>
 		</Build>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/BackendComms.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/BackendComms.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/ChatRoomHost.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/RegisteredClient.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/RegisteredClient.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/Server.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/Server.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Frontend/Account.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Frontend/Account.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ClientAction.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/Message.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/Message.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/MessageQueue.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ServerAction.h">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/InstructionInterpreter.cpp">
+			<Option target="ChatApp"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/InstructionInterpreter.h">
+			<Option target="ChatApp"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/Terminal.cpp">
+			<Option target="ChatApp"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/Terminal.h">
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/src/main.cpp">
-			<Option target="ChatRoomServer"/>
+			<Option target="ChatApp"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.Deqbg4Y2sX/ChatRoom/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

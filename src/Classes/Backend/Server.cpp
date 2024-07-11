@@ -342,18 +342,29 @@ namespace Backend {
                         break;
                     }
                 }
-                if (index == -1) {
+                if (index == -1)
                     return false;
-                }
+
+                //Check if requester is a manager.
                 for (const auto & manager : Rooms[index].Managers) {
                     if (manager->ID == act.ActionRequester.ID) {
                         flag = true;
                         break;
                     }
                 }
-                if (!flag) {
+                //Check if manager is trying to kick another manager
+                if(flag&&act.ActionRequester.ID!=Rooms[index].CreatorID)
+                    for(unsigned long long ID : act.IDs)
+                        for(auto & Manager : Rooms[index].Managers)
+                            if(ID==Manager->ID)
+                                return false;
+
+                //Check if requester is trying to remove themselves
+                flag=(flag)?flag:(act.IDs.size()==1 && act.IDs[0]==act.ActionRequester.ID);
+
+                if (!flag)
                     return false;
-                }
+
                 vector<RegisteredClient*> toErase;
                 int rI = index;
                 for (auto ID : act.IDs) {

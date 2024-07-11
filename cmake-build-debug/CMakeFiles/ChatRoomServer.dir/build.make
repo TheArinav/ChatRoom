@@ -209,6 +209,34 @@ CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp -o CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.s
 
+CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o: CMakeFiles/ChatRoomServer.dir/flags.make
+CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o: ../src/IO/Terminal.cpp
+CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o: CMakeFiles/ChatRoomServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o -MF CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o.d -o CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/Terminal.cpp
+
+CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/Terminal.cpp > CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.i
+
+CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/Terminal.cpp -o CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.s
+
+CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o: CMakeFiles/ChatRoomServer.dir/flags.make
+CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o: ../src/IO/InstructionInterpreter.cpp
+CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o: CMakeFiles/ChatRoomServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o -MF CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o.d -o CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/InstructionInterpreter.cpp
+
+CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/InstructionInterpreter.cpp > CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.i
+
+CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/InstructionInterpreter.cpp -o CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.s
+
 # Object files for target ChatRoomServer
 ChatRoomServer_OBJECTS = \
 "CMakeFiles/ChatRoomServer.dir/src/main.cpp.o" \
@@ -220,7 +248,9 @@ ChatRoomServer_OBJECTS = \
 "CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/ChatRoomHost.cpp.o" \
 "CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/Server.cpp.o" \
 "CMakeFiles/ChatRoomServer.dir/src/Classes/Frontend/Account.cpp.o" \
-"CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.o"
+"CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.o" \
+"CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o" \
+"CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o"
 
 # External object files for target ChatRoomServer
 ChatRoomServer_EXTERNAL_OBJECTS =
@@ -235,9 +265,11 @@ ChatRoomServer: CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/ChatRoomHost.c
 ChatRoomServer: CMakeFiles/ChatRoomServer.dir/src/Classes/Backend/Server.cpp.o
 ChatRoomServer: CMakeFiles/ChatRoomServer.dir/src/Classes/Frontend/Account.cpp.o
 ChatRoomServer: CMakeFiles/ChatRoomServer.dir/src/Classes/GeneralTypes/ClientAction.cpp.o
+ChatRoomServer: CMakeFiles/ChatRoomServer.dir/src/IO/Terminal.cpp.o
+ChatRoomServer: CMakeFiles/ChatRoomServer.dir/src/IO/InstructionInterpreter.cpp.o
 ChatRoomServer: CMakeFiles/ChatRoomServer.dir/build.make
 ChatRoomServer: CMakeFiles/ChatRoomServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ChatRoomServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ChatRoomServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChatRoomServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

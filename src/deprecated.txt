@@ -1,0 +1,147 @@
+#include <iostream>
+#include <thread>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include "Classes/Backend/BackendComms.h"
+#include "Classes/GeneralTypes/ServerAction.h"
+#include "Classes/Backend/RegisteredClient.h"
+
+using namespace Backend;
+using namespace GeneralTypes;
+
+void listenForResponses(int port) {
+    int client_fd;
+    struct sockaddr_in clientAddr;
+    int addrlen = sizeof(clientAddr);
+    char buffer[1024] = {0};
+
+    if ((client_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
+        std::cerr << "Socket creation failed for response listening" << std::endl;
+        return;
+    }
+
+    clientAddr.sin_family = AF_INET;
+    clientAddr.sin_addr.s_addr = INADDR_ANY;
+    clientAddr.sin_port = htons(port);
+
+    if (bind(client_fd, (struct sockaddr*)&clientAddr, sizeof(clientAddr)) < 0) {
+        std::cerr << "Bind failed for response listening" << std::endl;
+        close(client_fd);
+        return;
+    }
+
+    if (listen(client_fd, 3) < 0) {
+        std::cerr << "Listen failed for response listening" << std::endl;
+        close(client_fd);
+        return;
+    }
+
+    std::cout << "Listening for server responses on port " << port << "..." << std::endl;
+
+    while (true) {
+        int new_socket = accept(client_fd, (struct sockaddr*)&clientAddr, (socklen_t*)&addrlen);
+        if (new_socket < 0) {
+            std::cerr << "Accept failed for response listening" << std::endl;
+            continue;
+        }
+
+        ssize_t valread = read(new_socket, buffer, 1024);
+        if (valread < 0) {
+            std::cerr << "Read failed for response listening" << std::endl;
+            close(new_socket);
+            continue;
+        }
+
+        std::string response(buffer, valread);
+        ClientAction act = ClientAction::Deserialize(response);
+        if(!act.ToString().empty())
+            std::cout << "Received response from server: " << act.ToString() << std::endl;
+        close(new_socket);
+    }
+
+    close(client_fd);
+}
+void sendActionToServer(const ServerAction& action, const sockaddr_in& serverAddr) {
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock < 0) {
+        std::cerr << "Socket creation failed" << std::endl;
+        return;
+    }
+
+    if (connect(sock, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) < 0) {
+        std::cerr << "Connection to server failed" << std::endl;
+        close(sock);
+        return;
+    }
+
+    std::string serializedAction = action.Serialize();
+    if (send(sock, serializedAction.c_str(), serializedAction.size(), 0) < 0) {
+        std::cerr << "Failed to send action to server" << std::endl;
+        close(sock);
+        return;
+    }
+
+    char buffer[1024] = {0};
+    ssize_t valread = read(sock, buffer, 1024);
+    if (valread < 0) {
+        std::cerr << "Failed to receive response from server" << std::endl;
+    } else {
+        std::string response(buffer, valread);
+    }
+
+    close(sock);
+}
+
+void testServer() {
+    // Create and start the server
+    if (!BackendComms::Setup()) {
+        std::cerr << "Server setup failed!" << std::endl;
+        return;
+    }
+
+    std::thread serverThread([]() {
+        if (!BackendComms::Start()) {
+            std::cerr << "Server start failed!" << std::endl;
+        }
+    });
+
+    // Give server time to start
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+    // Start listening for responses on a separate thread
+    std::thread responseListenerThread(listenForResponses, 8001);
+
+    // Create test client
+    sockaddr_in testClientAddr;
+    testClientAddr.sin_family = AF_INET;
+    testClientAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    testClientAddr.sin_port = htons(8001);
+
+    RegisteredClient testClient("TestClient", testClientAddr);
+    testClient.ID = 2;
+
+    // Server address
+    sockaddr_in serverAddr;
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    serverAddr.sin_port = htons(8080);
+
+    // Test AddClient action
+    ServerAction addClientAction(ServerActionType::AddClient, testClient);
+    sendActionToServer(addClientAction, serverAddr);
+
+    // Give time for the server to process the action
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+    // Test LoginClient action
+    ServerAction loginClientAction(ServerActionType::LoginClient, testClient);
+    sendActionToServer(loginClientAction, serverAddr);
+
+    // Give time for the server to process the action
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+    // Stop the server
+    BackendComms::Stop();
+    serverThread.join();
+    responseListenerThread.detach();
+}
