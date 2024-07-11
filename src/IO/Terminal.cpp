@@ -12,12 +12,11 @@ namespace IO::Terminal{
    ___________________________________________________
   /___________________________________________________\
  | |        _____  ._.             ._.      ._.      | |
- | |       /  __ \ | |             | |      | |      | |
+ | |       / ___ \ | |             | |      | |      | |
  | |      | /   \/ | |__.   .___.  | |__.   | |      | |
- | |      | |      | '_  \ /  ^  \ |  __|   |_|      | |
- | |      | \__ /\ | | | | | (_) | |  |__.           | |
+ | |      | |      | '_. \ /  ^  \ |  __|   | |      | |
+ | |      | \__ /\ | | | | | (_) | |  |__.  '-'      | |
  | |       \_____/ |_| |_| \___^._\ \____|  [=]      | |
- | |                                                 | |
  | |_________________________________________________| |
  | |                                                 | |
  | |   Welcome to the "Chat!" App                    | |
@@ -42,7 +41,7 @@ namespace IO::Terminal{
 
         std::string input;
         while (true) {
-            std::cout << "  > ";
+            std::cout << "  '---> ";
             std::getline(std::cin, input);
             if (input == "exit") break;
             else if (input == "cls" || input == "clear") {
@@ -52,7 +51,7 @@ namespace IO::Terminal{
             }
 
             try {
-
+                auto inst = InstructionInterpreter::Parse( input);
             } catch (const std::exception& e) {
                 std::cerr << "Error: " << e.what() << "\n";
             }

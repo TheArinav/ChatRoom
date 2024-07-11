@@ -46,7 +46,7 @@ namespace IO {
         void Setup();
         Instruction Parse(const string&);
         static InstructionType ProcessInstruction(const string &inp);
-
+        static string IsLegalInst(const string&);
     }
 }
 
