@@ -10,12 +10,12 @@ namespace IO::Terminal{
     void PrintLogo(){
         std::cout << R"(
    ___________________________________________________
-  /___________________________________________________\
+  / _________________________________________________ \
  | |        _____  ._.             ._.      ._.      | |
  | |       / ___ \ | |             | |      | |      | |
  | |      | /   \/ | |__.   .___.  | |__.   | |      | |
  | |      | |      | '_. \ /  ^  \ |  __|   | |      | |
- | |      | \__ /\ | | | | | (_) | |  |__.  '-'      | |
+ | |      | \___/\ | | | | | (_) | |  |__.  '-'      | |
  | |       \_____/ |_| |_| \___^._\ \____|  [=]      | |
  | |_________________________________________________| |
  | |                                                 | |
@@ -36,12 +36,13 @@ namespace IO::Terminal{
     }
 
     void StartTerminal(){
+        clearTerminal();
         PrintLogo();
         InstructionInterpreter::Setup();
 
         std::string input;
         while (true) {
-            std::cout << "  '---> ";
+            std::cout << "  '---[Enter Instruction]---> ";
             std::getline(std::cin, input);
             if (input == "exit" || input == "q") break;
             else if (input == "cls" || input == "clear") {

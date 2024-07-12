@@ -16,7 +16,7 @@ namespace IO {
                 "3:ccr/change-chat-room|-id %i/--roomID %i,-n %s/--roomName %s",
                 "3:msgin/messageIn|-i %i/--roomID %i,-name %s/--roomName %s|-mc %s/--messageContent %s",
                 "5:msg/message|-mc %s/--messageContent %s",
-                "2:li/login|-id %i",
+                "2:li/login|-i %i/--ID %i|-a %i/--serverAddress %i",
                 "3:lo/logout|",
                 "2:mcr/make-chat-room|-n %s/--name %s|-i %i[]/--clientIDs %i[]",
                 "4:rcr/rename-chat-room|-nn %s/-newName %s",
@@ -24,7 +24,7 @@ namespace IO {
                 "5:prm/promote-member|-i %i/--clientID %i",
                 "5:dem/demote-member|-i %i/--clientID %i",
                 "4:ler/leave-room|-i %i/--roomID %i,-n %s/--roomName %s",
-                "5:kr/kick-from-room|-i %i{,}/--clientIDs %i{,}",
+                "5:kr/kick-from-room|-i %i[]/--clientIDs %i[]",
                 "2:reg/register|-sa %i/--serverAddress %i|-cdn %s/--clientDisplayName %s",
                 "2:accnts/accounts|",
                 "2:ra/remove-account|",
@@ -32,6 +32,14 @@ namespace IO {
                 "4:delf/delete-friend|-i %o/--clientID %i",
                 "3:pfl/print-friend-list|"
         };
+
+        TypesInfo = {
+                DataTypeInfo("%i", "ID", "0123456789", "0123456789", " "),
+                DataTypeInfo("%i[]", "IDList", "0123456789,", "[", "]"),
+                DataTypeInfo("%s", "String", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ", "\"",
+                             "\"")
+        };
+
 
         for (const string &cur: list) {
             InstructionType toPush = ProcessInstruction(cur);
@@ -130,17 +138,17 @@ namespace IO {
                         for (i = 0; i < sSec.size() && !stop; stop = sSec[i++] == ' ');
                         cur.ShortForm = string(sSec.substr(0, i - 1));
 
-                        cur.TypeDescriptor = string(sSec.substr(i));
-
                         stop = false;
                         for (i = 0; i < lSec.size() && !stop; stop = lSec[i++] == ' ');
                         cur.LongForm = lSec.substr(0, i - 1);
+
+                        cur.TypeDescriptor = string(lSec.substr(i));
                     }
 
                     cur.CategoryIndex = j;
 
                     stop = false;
-                    for (i = 0; i < ParamTypes.size() && !stop; stop = ParamTypes[i++].ShortForm == cur.ShortForm);
+                    for (i = 0; i < ParamTypes.size() && !stop; stop = ParamTypes[i++].LongForm == cur.LongForm);
                     if (!stop) {
                         ParamTypes.push_back(cur);
                         i = (int) ParamTypes.size();
@@ -151,7 +159,9 @@ namespace IO {
             }
         }
         //endregion
-
+        int paramCount=0;
+        for(i=0;i<inp.size();paramCount=(inp[i++]=='|')?paramCount+1:paramCount);
+        res.requiredParamCount=paramCount;
         return res;
     }
 
@@ -172,31 +182,96 @@ namespace IO {
 
         //Get instruction name
         for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
-        instName = inp.substr(0, (stop)?i-1:i);
+        instName = inp.substr(0, (stop) ? i - 1 : i);
 
         //region GetInstructionType
         stop = false;
         for (i = 0; i < InstTypes.size() && !stop; stop = (InstTypes[i].ShortForm == instName ||
                                                            InstTypes[i].LongForm == instName), i++);
-        if(!stop)
+        if (!stop)
             return "Unknown instruction '" + instName + "'";
 
-        InstructionType &instType = InstTypes[i-1];
+        InstructionType &instType = InstTypes[i - 1];
         //endregion
 
-        if(instType.Parameters.size()>1 && instType.Parameters[0].TypeDescriptor == "static"){
+        if (instType.Parameters.size() > 1 && instType.Parameters[0].TypeDescriptor == "static") {
             string param;
-            stop=false;
+            stop = false;
             for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
             param = inp.substr(i);
-            stop=false;
-            for(const auto& sParam:instType.Parameters)
-                if((stop=sParam.ShortForm==param))
+            stop = false;
+            for (const auto &sParam: instType.Parameters)
+                if ((stop = sParam.ShortForm == param))
                     break;
-            if(!stop)
-                return "Invalid static parameter '" + param + "' for instruction '" +instName + "'";
-        }else if (!instType.Parameters.empty()){
+            if (!stop)
+                return "Invalid static parameter '" + param + "' for instruction '" + instName + "'";
 
+        } else if (!instType.Parameters.empty()) {
+            string param;
+            stop = false;
+            for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
+            param = inp.substr(i);
+            i = 0;
+            vector<int> catParamCount;
+            for (int paramIndex =0; paramIndex<instType.requiredParamCount;catParamCount.push_back(0), paramIndex++);
+            for (int paramIndex =0; paramIndex<catParamCount.size(); paramIndex++){
+                ParameterType found = {};
+                bool flag = false;
+                int saveI=i;
+                for (const auto &cur: instType.Parameters) {
+                    i=saveI;
+                    for (stop = false; i < param.size() && !stop; stop = param[i++] == '-');
+                    if (!stop)
+                        return "No param identifier found!";
+                    flag = stop;
+                    stop = false;
+                    for (j = i; j < param.size() && !stop; stop = param[j++] == ' ');
+                    if (!stop)
+                        --j;
+                    stop = false;
+                    if (param.substr(i - 1, j - i) == cur.ShortForm ||
+                        param.substr(i, i - j) == cur.LongForm) {
+                        found = cur;
+                        stop = true;
+                        break;
+                    }
+                }
+                if(!stop)
+                    return "Unidentified input parameter: '" + param.substr(i - 1, j - i) + "'";
+                // j points to the opener char of the input data.
+                int k;
+                for (k = 0, flag = false;
+                     k < TypesInfo.size() && !flag; flag = TypesInfo[k++].Descriptor == found.TypeDescriptor);
+                if (!flag)
+                    return "CRITICAL: Invalid data type detected!";
+                DataTypeInfo typeInfo = TypesInfo[k-1];
+                catParamCount[found.CategoryIndex]++;
+                for(flag=false,k=0;k < catParamCount.size() && !flag; flag = catParamCount[k++]>=2);
+                if(flag)
+                    return "Detected input for multiple parameters from the same category!";
+                //Check if the opener char is valid:
+                for (k = 0, flag = false; k < typeInfo.Opener.size() && !flag; flag = typeInfo.Opener[k++] == param[j]);
+                if (!flag)
+                    return "Opening char of data input type '" + typeInfo.Descriptor +
+                           "' is invalid. Valid opening chars are '" + typeInfo.Opener + "'";
+                {
+                    int curI = j;
+                    bool closedFlag = false;
+                    //Flag signifies the appearance of an illegal char:
+                    for (flag = false; curI < param.size() && !closedFlag && !flag; curI++) {
+                        closedFlag = param[curI] == typeInfo.Closer[0] || param[curI] == ' ';
+                        for (k = 0, flag = true;
+                             k < typeInfo.ValidChars.size() && flag && !closedFlag; flag = param[curI] != typeInfo.ValidChars[k++]);
+                    }
+                    flag=(closedFlag)? false:closedFlag;
+                }
+                if(flag)
+                    return "An invalid char was detected inside data input for type '" + typeInfo.Descriptor + "'";
+            }
+            bool flag;
+            for(flag=false,i=0;i < catParamCount.size() && !flag; flag = catParamCount[i++]!=1);
+            if(flag)
+                return "Instruction is missing a parameter from on of its categories";
         }
         return "";
     }

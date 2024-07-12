@@ -1,6 +1,7 @@
 #ifndef INSTRUCTION_INTERPRETER_H
 #define INSTRUCTION_INTERPRETER_H
 
+#include <utility>
 #include <vector>
 #include <string>
 #include <sstream>
@@ -20,6 +21,16 @@ namespace IO {
         CLIENT_LOGGED_IN_NO_ROOM=4,
         CLIENT_LOGGED_IN_ROOM=5
     };
+    struct DataTypeInfo{
+        string Descriptor;
+        string Name;
+        string ValidChars;
+        string Opener;
+        string Closer;
+        DataTypeInfo(string des, string name, string chars, string open,string close):
+        Descriptor(std::move(des)), Name(std::move(name)), ValidChars(std::move(chars)), Opener(std::move(open))
+        ,Closer(std::move(close)){}
+    };
     struct ParameterType{
         string ShortForm;
         string LongForm;
@@ -31,6 +42,7 @@ namespace IO {
         string LongForm;
         Context ValidContext;
         vector<ParameterType> Parameters;
+        int requiredParamCount;
     };
     struct Parameter{
         ParameterType *Type;
@@ -43,6 +55,7 @@ namespace IO {
     namespace InstructionInterpreter{
         static vector<ParameterType> ParamTypes;
         static vector<InstructionType> InstTypes;
+        static vector<DataTypeInfo> TypesInfo;
         void Setup();
         Instruction Parse(const string&);
         static InstructionType ProcessInstruction(const string &inp);
