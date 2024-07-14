@@ -263,7 +263,7 @@ namespace IO {
                         for (k = 0, flag = true;
                              k < typeInfo.ValidChars.size() && flag && !closedFlag; flag = param[curI] != typeInfo.ValidChars[k++]);
                     }
-                    flag=(closedFlag)? false:closedFlag;
+                    flag=(closedFlag)? false : closedFlag;
                 }
                 if(flag)
                     return "An invalid char was detected inside data input for type '" + typeInfo.Descriptor + "'";
