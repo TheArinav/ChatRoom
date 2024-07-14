@@ -12,11 +12,11 @@ namespace IO {
                 "-1:ecx/exit-context|",
                 "0:s/start|server,client",
                 "1:sd/shutdown|",
-                "1:bc/broadcast|-msg %s/--message %s",
+                "1:bc/broadcast|-m %s/--message %s",
                 "3:ccr/change-chat-room|-i %i/--roomID %i,-n %s/--roomName %s",
                 "3:msgin/messageIn|-i %i/--roomID %i,-n %s/--roomName %s|-mc %s/--messageContent %s",
-                "5:msg/message|-mc %s/--messageContent %s",
-                "2:li/login|-i %i/--ID %i|-a %i/--serverAddress %i",
+                "5:msg/message|-m %s/--message %s",
+                "2:li/login|-i %i/--ID %i|-a %i/--address %i",
                 "3:lo/logout|",
                 "2:mcr/make-chat-room|-n %s/--name %s|-i %i[]/--clientIDs %i[]",
                 "4:rcr/rename-chat-room|-nn %s/-newName %s",
@@ -24,7 +24,7 @@ namespace IO {
                 "5:prm/promote-member|-i %i/--clientID %i",
                 "5:dem/demote-member|-i %i/--clientID %i",
                 "4:ler/leave-room|-i %i/--roomID %i,-n %s/--roomName %s",
-                "5:kr/kick-from-room|-i %i[]/--clientIDs %i[]",
+                "5:kr/kick-from-room|-i %i[]/--kickClientIDs %i[]",
                 "2:reg/register|-sa %i/--serverAddress %i|-cdn %s/--clientDisplayName %s",
                 "2:accnts/accounts|",
                 "2:ra/remove-account|",
@@ -204,10 +204,10 @@ namespace IO {
                     else
                         ++j;
                 auto parameter = Parameter{};
-                parameter.Type=&instType->Parameters[j];
-                parameter.Value=param;
+                parameter.Type = &instType->Parameters[j];
+                parameter.Value = param;
                 res.Params.push_back(parameter);
-            }else{
+            } else {
                 string param;
                 stop = false;
                 for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
@@ -217,7 +217,7 @@ namespace IO {
                     ParameterType *found = nullptr;
                     bool flag = false;
                     int saveI = i;
-                    for (auto & Parameter : instType->Parameters) {
+                    for (auto &Parameter: instType->Parameters) {
                         ParameterType *cur = &Parameter;
                         i = saveI;
                         for (stop = false; i < param.size() && !stop; stop = param[i++] == '-');
@@ -243,23 +243,33 @@ namespace IO {
                     DataTypeInfo typeInfo = TypesInfo[k - 1];
                     //Check if the opener char is valid:
                     for (k = 0, flag = false; k < typeInfo.Opener.size() && !flag;
-                    flag = typeInfo.Opener[k++] == param[j]);
+                         flag = typeInfo.Opener[k++] == param[j]);
 
-                    int curI = (typeInfo.Descriptor=="%i")?j:j+1;
+                    int curI = (typeInfo.Descriptor == "%i") ? j : j + 1;
                     for (flag = false; curI < param.size() && !flag; curI++)
                         flag = param[curI] == typeInfo.Closer[0];
 
                     auto curParameter = Parameter{};
-                    curParameter.Type=found;
-                    if (curParameter.Type->TypeDescriptor=="%i"){
-                        unsigned long long id = std::stoull(param.substr(j,curI-j));
-                        curParameter.Value=id;
-                    }else if (curParameter.Type->TypeDescriptor=="%s"){
-                        string name = param.substr(j+1,curI-j-2);
-                        curParameter.Value=name;
-                    }else if(curParameter.Type->TypeDescriptor=="%i[]"){
+                    curParameter.Type = found;
+                    if (curParameter.Type->TypeDescriptor == "%i") {
+                        unsigned long long id = std::stoull(param.substr(j, curI - j));
+                        curParameter.Value = id;
+                    } else if (curParameter.Type->TypeDescriptor == "%s") {
+                        string name = param.substr(j + 1, curI - j - 2);
+                        curParameter.Value = name;
+                    } else if (curParameter.Type->TypeDescriptor == "%i[]") {
                         ++j;
-
+                        vector<unsigned long long> ids = {};
+                        stop = false;
+                        curI = j - 1;
+                        do {
+                            flag = false;
+                            for (; !flag && !stop; flag = param[curI] == ',', stop = param[curI] == ']', curI++);
+                            unsigned long long id = std::stoull(param.substr(j, curI - j));
+                            ids.push_back(id);
+                            j=curI;
+                        } while (!stop);
+                        curParameter.Value = ids;
                     }
                 }
             }
@@ -300,8 +310,7 @@ namespace IO {
             if (!stop)
                 return "Invalid static parameter '" + param + "' for instruction '" + instName + "'";
 
-        }
-        else if (!instType.Parameters.empty()) {
+        } else if (!instType.Parameters.empty()) {
             string param;
             stop = false;
             for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
@@ -351,7 +360,7 @@ namespace IO {
                     return "Opening char of data input type '" + typeInfo.Descriptor +
                            "' is invalid. Valid opening chars are '" + typeInfo.Opener + "'";
                 {
-                    int curI = (typeInfo.Descriptor=="%i")?j:j+1;
+                    int curI = (typeInfo.Descriptor == "%i") ? j : j + 1;
                     bool closedFlag = false;
                     //Flag signifies the appearance of an illegal char:
                     for (flag = false; curI < param.size() && !closedFlag && !flag; curI++) {
@@ -361,7 +370,7 @@ namespace IO {
                                                                                            typeInfo.ValidChars[k++]);
                     }
                     flag = (closedFlag) ? false : closedFlag;
-                    if(typeInfo.Closer != " " && !closedFlag)
+                    if (typeInfo.Closer != " " && !closedFlag)
                         return "Parameter input was not properly closed! \nMissing: '" + typeInfo.Closer + "'";
                 }
                 if (flag)
@@ -372,13 +381,12 @@ namespace IO {
             for (flag = false, i = 0; i < catParamCount.size() && !flag; flag = catParamCount[i++] != 1);
             if (flag)
                 return "Instruction is missing a parameter from on of its categories";
-        }
-        else{
+        } else {
             string reducedInst;
-            for(i=0; i<inp.size(); i++)
-                if(inp[i]!= ' ' && inp[i] != '\n')
-                    reducedInst+=inp[i];
-            if (reducedInst!=instType.ShortForm && reducedInst!=instType.LongForm)
+            for (i = 0; i < inp.size(); i++)
+                if (inp[i] != ' ' && inp[i] != '\n')
+                    reducedInst += inp[i];
+            if (reducedInst != instType.ShortForm && reducedInst != instType.LongForm)
                 return "Instruction '" + instType.LongForm + "' Doesn't except any parameters";
         }
         return "";
