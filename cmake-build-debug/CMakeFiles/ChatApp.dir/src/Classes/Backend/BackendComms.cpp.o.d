@@ -1,4 +1,5 @@
-CMakeFiles/CPP.dir/src/main.cpp.o: /tmp/ChatRoom/src/main.cpp \
+CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o: \
+ /tmp/ChatRoom/src/Classes/Backend/BackendComms.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
  /usr/include/aarch64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/9/bits/os_defines.h \
@@ -8,10 +9,11 @@ CMakeFiles/CPP.dir/src/main.cpp.o: /tmp/ChatRoom/src/main.cpp \
  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
  /usr/include/aarch64-linux-gnu/c++/9/bits/cpu_defines.h \
- /usr/include/c++/9/ostream /usr/include/c++/9/ios \
- /usr/include/c++/9/iosfwd /usr/include/c++/9/bits/stringfwd.h \
- /usr/include/c++/9/bits/memoryfwd.h /usr/include/c++/9/bits/postypes.h \
- /usr/include/c++/9/cwchar /usr/include/wchar.h \
+ /usr/include/c++/9/pstl/pstl_config.h /usr/include/c++/9/ostream \
+ /usr/include/c++/9/ios /usr/include/c++/9/iosfwd \
+ /usr/include/c++/9/bits/stringfwd.h /usr/include/c++/9/bits/memoryfwd.h \
+ /usr/include/c++/9/bits/postypes.h /usr/include/c++/9/cwchar \
+ /usr/include/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/aarch64-linux-gnu/bits/floatn.h \
  /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
@@ -94,7 +96,9 @@ CMakeFiles/CPP.dir/src/main.cpp.o: /tmp/ChatRoom/src/main.cpp \
  /usr/include/c++/9/initializer_list \
  /usr/include/c++/9/bits/basic_string.h \
  /usr/include/c++/9/ext/alloc_traits.h \
- /usr/include/c++/9/bits/alloc_traits.h \
+ /usr/include/c++/9/bits/alloc_traits.h /usr/include/c++/9/string_view \
+ /usr/include/c++/9/limits /usr/include/c++/9/bits/functional_hash.h \
+ /usr/include/c++/9/bits/string_view.tcc \
  /usr/include/c++/9/ext/string_conversions.h /usr/include/c++/9/cstdlib \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h \
@@ -119,7 +123,6 @@ CMakeFiles/CPP.dir/src/main.cpp.o: /tmp/ChatRoom/src/main.cpp \
  /usr/include/aarch64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
- /usr/include/c++/9/bits/functional_hash.h \
  /usr/include/c++/9/bits/basic_string.tcc \
  /usr/include/c++/9/bits/locale_classes.tcc \
  /usr/include/c++/9/system_error \
@@ -135,4 +138,70 @@ CMakeFiles/CPP.dir/src/main.cpp.o: /tmp/ChatRoom/src/main.cpp \
  /usr/include/c++/9/bits/locale_facets.tcc \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
- /usr/include/c++/9/bits/istream.tcc
+ /usr/include/c++/9/bits/istream.tcc \
+ /usr/include/aarch64-linux-gnu/sys/socket.h \
+ /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/aarch64-linux-gnu/bits/socket.h \
+ /usr/include/aarch64-linux-gnu/bits/socket_type.h \
+ /usr/include/aarch64-linux-gnu/bits/sockaddr.h \
+ /usr/include/aarch64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/aarch64-linux-gnu/asm/posix_types.h \
+ /usr/include/asm-generic/posix_types.h \
+ /usr/include/aarch64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h \
+ /usr/include/aarch64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/aarch64-linux-gnu/bits/types/struct_osockaddr.h \
+ /usr/include/netinet/in.h /usr/include/aarch64-linux-gnu/bits/in.h \
+ /usr/include/unistd.h /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
+ /usr/include/aarch64-linux-gnu/bits/environments.h \
+ /usr/include/aarch64-linux-gnu/bits/confname.h \
+ /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
+ /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/c++/9/mutex /usr/include/c++/9/tuple \
+ /usr/include/c++/9/utility /usr/include/c++/9/bits/stl_relops.h \
+ /usr/include/c++/9/array /usr/include/c++/9/bits/uses_allocator.h \
+ /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/chrono \
+ /usr/include/c++/9/ratio /usr/include/c++/9/ctime \
+ /usr/include/c++/9/bits/parse_numbers.h \
+ /usr/include/c++/9/bits/std_mutex.h \
+ /usr/include/c++/9/bits/unique_lock.h /usr/include/c++/9/memory \
+ /usr/include/c++/9/bits/stl_construct.h \
+ /usr/include/c++/9/bits/stl_uninitialized.h \
+ /usr/include/c++/9/bits/stl_tempbuf.h \
+ /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/9/ext/concurrence.h \
+ /usr/include/c++/9/bits/unique_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr_base.h \
+ /usr/include/c++/9/bits/allocated_ptr.h \
+ /usr/include/c++/9/bits/refwrap.h \
+ /usr/include/c++/9/ext/aligned_buffer.h \
+ /usr/include/c++/9/bits/shared_ptr_atomic.h \
+ /usr/include/c++/9/bits/atomic_base.h \
+ /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/9/backward/auto_ptr.h \
+ /usr/include/c++/9/pstl/glue_memory_defs.h \
+ /usr/include/c++/9/pstl/execution_defs.h /usr/include/c++/9/thread \
+ /tmp/ChatRoom/src/Classes/Backend/Server.h /usr/include/c++/9/vector \
+ /usr/include/c++/9/bits/stl_vector.h \
+ /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
+ /usr/include/c++/9/queue /usr/include/c++/9/deque \
+ /usr/include/c++/9/bits/stl_deque.h /usr/include/c++/9/bits/deque.tcc \
+ /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_queue.h \
+ /usr/include/c++/9/any \
+ /tmp/ChatRoom/src/Classes/Backend/../GeneralTypes/Message.h \
+ /tmp/ChatRoom/src/Classes/Backend/RegisteredClient.h \
+ /usr/include/c++/9/stack /usr/include/c++/9/bits/stl_stack.h \
+ /tmp/ChatRoom/src/Classes/Backend/../GeneralTypes/MessageQueue.h \
+ /tmp/ChatRoom/src/Classes/Backend/../GeneralTypes/Message.h \
+ /tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.h \
+ /tmp/ChatRoom/src/Classes/Backend/../GeneralTypes/ServerAction.h \
+ /tmp/ChatRoom/src/Classes/Backend/../GeneralTypes/../Backend/RegisteredClient.h \
+ /tmp/ChatRoom/src/Classes/Backend/../GeneralTypes/ClientAction.h \
+ /tmp/ChatRoom/src/Classes/Backend/../GeneralTypes/StreamableString.h \
+ /usr/include/c++/9/sstream /usr/include/c++/9/bits/sstream.tcc \
+ /tmp/ChatRoom/src/Classes/Backend/BackendComms.h

@@ -13,8 +13,8 @@ namespace IO {
                 "0:s/start|server,client",
                 "1:sd/shutdown|",
                 "1:bc/broadcast|-msg %s/--message %s",
-                "3:ccr/change-chat-room|-id %i/--roomID %i,-n %s/--roomName %s",
-                "3:msgin/messageIn|-i %i/--roomID %i,-name %s/--roomName %s|-mc %s/--messageContent %s",
+                "3:ccr/change-chat-room|-i %i/--roomID %i,-n %s/--roomName %s",
+                "3:msgin/messageIn|-i %i/--roomID %i,-n %s/--roomName %s|-mc %s/--messageContent %s",
                 "5:msg/message|-mc %s/--messageContent %s",
                 "2:li/login|-i %i/--ID %i|-a %i/--serverAddress %i",
                 "3:lo/logout|",
@@ -159,9 +159,9 @@ namespace IO {
             }
         }
         //endregion
-        int paramCount=0;
-        for(i=0;i<inp.size();paramCount=(inp[i++]=='|')?paramCount+1:paramCount);
-        res.requiredParamCount=paramCount;
+        int paramCount = 0;
+        for (i = 0; i < inp.size(); paramCount = (inp[i++] == '|') ? paramCount + 1 : paramCount);
+        res.requiredParamCount = paramCount;
         return res;
     }
 
@@ -171,6 +171,100 @@ namespace IO {
             throw std::invalid_argument(checkRes);
 
         Instruction res = {};
+
+        string instName;
+        int i, j;
+        bool stop = false;
+
+        //Get instruction name
+        for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
+        instName = inp.substr(0, (stop) ? i - 1 : i);
+
+        //region GetInstructionType
+        stop = false;
+        for (i = 0; i < InstTypes.size() && !stop; stop = (InstTypes[i].ShortForm == instName ||
+                                                           InstTypes[i].LongForm == instName), i++);
+        InstructionType *instType = &InstTypes[i - 1];
+        //endregion
+
+        res.Type = instType;
+
+
+        //region Handle parameters:
+        if (!instType->Parameters.empty()) {
+            if (instType->Parameters[0].TypeDescriptor == "static") {
+                string param;
+                stop = false;
+                for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
+                param = inp.substr(i);
+                j = 0;
+                for (const auto &sParam: instType->Parameters)
+                    if (sParam.ShortForm == param)
+                        break;
+                    else
+                        ++j;
+                auto parameter = Parameter{};
+                parameter.Type=&instType->Parameters[j];
+                parameter.Value=param;
+                res.Params.push_back(parameter);
+            }else{
+                string param;
+                stop = false;
+                for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
+                param = inp.substr(i);
+                i = 0;
+                for (int paramIndex = 0; paramIndex < instType->requiredParamCount; paramIndex++) {
+                    ParameterType *found = nullptr;
+                    bool flag = false;
+                    int saveI = i;
+                    for (auto & Parameter : instType->Parameters) {
+                        ParameterType *cur = &Parameter;
+                        i = saveI;
+                        for (stop = false; i < param.size() && !stop; stop = param[i++] == '-');
+
+                        flag = stop;
+                        stop = false;
+                        for (j = i; j < param.size() && !stop; stop = param[j++] == ' ');
+                        if (!stop)
+                            --j;
+                        stop = false;
+                        if (param.substr(i - 1, j - i) == cur->ShortForm ||
+                            param.substr(i, i - j) == cur->LongForm) {
+                            found = cur;
+                            stop = true;
+                            break;
+                        }
+                    }
+
+                    // j points to the opener char of the input data.
+                    int k;
+                    for (k = 0, flag = false;
+                         k < TypesInfo.size() && !flag; flag = TypesInfo[k++].Descriptor == found->TypeDescriptor);
+                    DataTypeInfo typeInfo = TypesInfo[k - 1];
+                    //Check if the opener char is valid:
+                    for (k = 0, flag = false; k < typeInfo.Opener.size() && !flag;
+                    flag = typeInfo.Opener[k++] == param[j]);
+
+                    int curI = (typeInfo.Descriptor=="%i")?j:j+1;
+                    for (flag = false; curI < param.size() && !flag; curI++)
+                        flag = param[curI] == typeInfo.Closer[0];
+
+                    auto curParameter = Parameter{};
+                    curParameter.Type=found;
+                    if (curParameter.Type->TypeDescriptor=="%i"){
+                        unsigned long long id = std::stoull(param.substr(j,curI-j));
+                        curParameter.Value=id;
+                    }else if (curParameter.Type->TypeDescriptor=="%s"){
+                        string name = param.substr(j+1,curI-j-2);
+                        curParameter.Value=name;
+                    }else if(curParameter.Type->TypeDescriptor=="%i[]"){
+                        ++j;
+
+                    }
+                }
+            }
+        }
+        //endregion
 
         return res;
     }
@@ -206,20 +300,22 @@ namespace IO {
             if (!stop)
                 return "Invalid static parameter '" + param + "' for instruction '" + instName + "'";
 
-        } else if (!instType.Parameters.empty()) {
+        }
+        else if (!instType.Parameters.empty()) {
             string param;
             stop = false;
             for (i = 0; i < inp.size() && !stop; stop = inp[i++] == ' ');
             param = inp.substr(i);
             i = 0;
             vector<int> catParamCount;
-            for (int paramIndex =0; paramIndex<instType.requiredParamCount;catParamCount.push_back(0), paramIndex++);
-            for (int paramIndex =0; paramIndex<catParamCount.size(); paramIndex++){
+            for (int paramIndex = 0;
+                 paramIndex < instType.requiredParamCount; catParamCount.push_back(0), paramIndex++);
+            for (int paramIndex = 0; paramIndex < catParamCount.size(); paramIndex++) {
                 ParameterType found = {};
                 bool flag = false;
-                int saveI=i;
+                int saveI = i;
                 for (const auto &cur: instType.Parameters) {
-                    i=saveI;
+                    i = saveI;
                     for (stop = false; i < param.size() && !stop; stop = param[i++] == '-');
                     if (!stop)
                         return "No param identifier found!";
@@ -236,7 +332,7 @@ namespace IO {
                         break;
                     }
                 }
-                if(!stop)
+                if (!stop)
                     return "Unidentified input parameter: '" + param.substr(i - 1, j - i) + "'";
                 // j points to the opener char of the input data.
                 int k;
@@ -244,10 +340,10 @@ namespace IO {
                      k < TypesInfo.size() && !flag; flag = TypesInfo[k++].Descriptor == found.TypeDescriptor);
                 if (!flag)
                     return "CRITICAL: Invalid data type detected!";
-                DataTypeInfo typeInfo = TypesInfo[k-1];
+                DataTypeInfo typeInfo = TypesInfo[k - 1];
                 catParamCount[found.CategoryIndex]++;
-                for(flag=false,k=0;k < catParamCount.size() && !flag; flag = catParamCount[k++]>=2);
-                if(flag)
+                for (flag = false, k = 0; k < catParamCount.size() && !flag; flag = catParamCount[k++] >= 2);
+                if (flag)
                     return "Detected input for multiple parameters from the same category!";
                 //Check if the opener char is valid:
                 for (k = 0, flag = false; k < typeInfo.Opener.size() && !flag; flag = typeInfo.Opener[k++] == param[j]);
@@ -255,23 +351,35 @@ namespace IO {
                     return "Opening char of data input type '" + typeInfo.Descriptor +
                            "' is invalid. Valid opening chars are '" + typeInfo.Opener + "'";
                 {
-                    int curI = j;
+                    int curI = (typeInfo.Descriptor=="%i")?j:j+1;
                     bool closedFlag = false;
                     //Flag signifies the appearance of an illegal char:
                     for (flag = false; curI < param.size() && !closedFlag && !flag; curI++) {
-                        closedFlag = param[curI] == typeInfo.Closer[0] || param[curI] == ' ';
+                        closedFlag = param[curI] == typeInfo.Closer[0];
                         for (k = 0, flag = true;
-                             k < typeInfo.ValidChars.size() && flag && !closedFlag; flag = param[curI] != typeInfo.ValidChars[k++]);
+                             k < typeInfo.ValidChars.size() && flag && !closedFlag; flag = param[curI] !=
+                                                                                           typeInfo.ValidChars[k++]);
                     }
-                    flag=(closedFlag)? false : closedFlag;
+                    flag = (closedFlag) ? false : closedFlag;
+                    if(typeInfo.Closer != " " && !closedFlag)
+                        return "Parameter input was not properly closed! \nMissing: '" + typeInfo.Closer + "'";
                 }
-                if(flag)
+                if (flag)
                     return "An invalid char was detected inside data input for type '" + typeInfo.Descriptor + "'";
+
             }
             bool flag;
-            for(flag=false,i=0;i < catParamCount.size() && !flag; flag = catParamCount[i++]!=1);
-            if(flag)
+            for (flag = false, i = 0; i < catParamCount.size() && !flag; flag = catParamCount[i++] != 1);
+            if (flag)
                 return "Instruction is missing a parameter from on of its categories";
+        }
+        else{
+            string reducedInst;
+            for(i=0; i<inp.size(); i++)
+                if(inp[i]!= ' ' && inp[i] != '\n')
+                    reducedInst+=inp[i];
+            if (reducedInst!=instType.ShortForm && reducedInst!=instType.LongForm)
+                return "Instruction '" + instType.LongForm + "' Doesn't except any parameters";
         }
         return "";
     }
