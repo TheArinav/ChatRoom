@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/ChatRoom
+CMAKE_SOURCE_DIR = /tmp/tmp.Deqbg4Y2sX/ChatRoom
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/ChatRoom/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ChatApp.dir/depend.make
@@ -72,170 +72,184 @@ include CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/main.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/ChatApp.dir/src/main.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ChatApp.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/main.cpp.o -MF CMakeFiles/ChatApp.dir/src/main.cpp.o.d -o CMakeFiles/ChatApp.dir/src/main.cpp.o -c /tmp/ChatRoom/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ChatApp.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/main.cpp.o -MF CMakeFiles/ChatApp.dir/src/main.cpp.o.d -o CMakeFiles/ChatApp.dir/src/main.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/main.cpp
 
 CMakeFiles/ChatApp.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/main.cpp > CMakeFiles/ChatApp.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/main.cpp > CMakeFiles/ChatApp.dir/src/main.cpp.i
 
 CMakeFiles/ChatApp.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/main.cpp -o CMakeFiles/ChatApp.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/main.cpp -o CMakeFiles/ChatApp.dir/src/main.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o: ../src/Classes/GeneralTypes/ServerAction.cpp
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o -c /tmp/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp > CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp > CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ServerAction.cpp -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ServerAction.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o: ../src/Classes/Backend/BackendComms.cpp
 CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o -c /tmp/ChatRoom/src/Classes/Backend/BackendComms.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/BackendComms.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/Backend/BackendComms.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/BackendComms.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/Backend/BackendComms.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/BackendComms.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o: ../src/Classes/Backend/RegisteredClient.cpp
 CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o -c /tmp/ChatRoom/src/Classes/Backend/RegisteredClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/RegisteredClient.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/Backend/RegisteredClient.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/RegisteredClient.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/Backend/RegisteredClient.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/RegisteredClient.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o: ../src/Classes/GeneralTypes/MessageQueue.cpp
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o -c /tmp/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp > CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp > CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/MessageQueue.cpp -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/MessageQueue.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o: ../src/Classes/GeneralTypes/Message.cpp
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o -c /tmp/ChatRoom/src/Classes/GeneralTypes/Message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/Message.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/GeneralTypes/Message.cpp > CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/Message.cpp > CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/GeneralTypes/Message.cpp -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/Message.cpp -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/Message.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o: ../src/Classes/Backend/ChatRoomHost.cpp
 CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o -c /tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/ChatRoomHost.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o: ../src/Classes/Backend/Server.cpp
 CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o -c /tmp/ChatRoom/src/Classes/Backend/Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/Server.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/Backend/Server.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/Server.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/Backend/Server.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/Server.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o: ../src/Classes/Frontend/Account.cpp
 CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o -c /tmp/ChatRoom/src/Classes/Frontend/Account.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Frontend/Account.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/Frontend/Account.cpp > CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Frontend/Account.cpp > CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/Frontend/Account.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Frontend/Account.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.s
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o: ../src/Classes/GeneralTypes/ClientAction.cpp
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o -c /tmp/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp > CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp > CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.i
 
 CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/GeneralTypes/ClientAction.cpp -o CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.s
 
 CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o: ../src/IO/Terminal.cpp
 CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o -MF CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o.d -o CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o -c /tmp/ChatRoom/src/IO/Terminal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o -MF CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o.d -o CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/Terminal.cpp
 
 CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/IO/Terminal.cpp > CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/Terminal.cpp > CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.i
 
 CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/IO/Terminal.cpp -o CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/Terminal.cpp -o CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.s
 
 CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o: CMakeFiles/ChatApp.dir/flags.make
 CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o: ../src/IO/InstructionInterpreter.cpp
 CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o -MF CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o.d -o CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o -c /tmp/ChatRoom/src/IO/InstructionInterpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o -MF CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o.d -o CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/InstructionInterpreter.cpp
 
 CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/ChatRoom/src/IO/InstructionInterpreter.cpp > CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/InstructionInterpreter.cpp > CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.i
 
 CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/ChatRoom/src/IO/InstructionInterpreter.cpp -o CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/IO/InstructionInterpreter.cpp -o CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.s
+
+CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o: CMakeFiles/ChatApp.dir/flags.make
+CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o: ../src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp
+CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o: CMakeFiles/ChatApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o -MF CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o.d -o CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o -c /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp
+
+CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp > CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.i
+
+CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.Deqbg4Y2sX/ChatRoom/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp -o CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.s
 
 # Object files for target ChatApp
 ChatApp_OBJECTS = \
@@ -250,7 +264,8 @@ ChatApp_OBJECTS = \
 "CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o" \
 "CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o" \
 "CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o" \
-"CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o"
+"CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o" \
+"CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o"
 
 # External object files for target ChatApp
 ChatApp_EXTERNAL_OBJECTS =
@@ -267,9 +282,10 @@ ChatApp: CMakeFiles/ChatApp.dir/src/Classes/Frontend/Account.cpp.o
 ChatApp: CMakeFiles/ChatApp.dir/src/Classes/GeneralTypes/ClientAction.cpp.o
 ChatApp: CMakeFiles/ChatApp.dir/src/IO/Terminal.cpp.o
 ChatApp: CMakeFiles/ChatApp.dir/src/IO/InstructionInterpreter.cpp.o
+ChatApp: CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o
 ChatApp: CMakeFiles/ChatApp.dir/build.make
 ChatApp: CMakeFiles/ChatApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ChatApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ChatApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChatApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -281,6 +297,6 @@ CMakeFiles/ChatApp.dir/clean:
 .PHONY : CMakeFiles/ChatApp.dir/clean
 
 CMakeFiles/ChatApp.dir/depend:
-	cd /tmp/ChatRoom/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/ChatRoom /tmp/ChatRoom /tmp/ChatRoom/cmake-build-debug /tmp/ChatRoom/cmake-build-debug /tmp/ChatRoom/cmake-build-debug/CMakeFiles/ChatApp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/tmp.Deqbg4Y2sX/ChatRoom /tmp/tmp.Deqbg4Y2sX/ChatRoom /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles/ChatApp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ChatApp.dir/depend
 

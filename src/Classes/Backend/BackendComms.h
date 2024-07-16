@@ -11,6 +11,7 @@
 #include <memory>
 #include <thread>
 #include "Server.h"
+#include "MultiThreadedEnvironment/Communications.h"
 
 using std::string;
 using std::thread;
@@ -21,19 +22,30 @@ using std::lock_guard;
 using std::make_unique;
 
 namespace Backend {
+    enum class HandleType {
+        UNDEFINED,
+        MultiThread,
+        Select,
+        Epoll
+    };
+    typedef addrinfo AddressInfo;
 
     class BackendComms {
     public:
         /**
+         * Saves the Communications manager object.
+         */
+        static std::unique_ptr<backend::multi_thread_serv::Communications> MTCommsO;
+        /**
          * The Host server.
          */
-        static unique_ptr<Server> HostServer;
+        static unique_ptr <Server> HostServer;
 
         /**
          * Sets up socket.
          * @return Whether the setup was completed successfully.
          */
-        static bool Setup();
+        static bool Setup(HandleType hType);
 
         /**
          * Start the server and listen to the socket.
@@ -46,13 +58,16 @@ namespace Backend {
          */
         static bool Stop();
 
-    private:
         // Prevent instantiation by making the constructor and destructor private
         BackendComms() = delete;
-        ~BackendComms() = delete;
-        BackendComms(const BackendComms&) = delete;
-        BackendComms& operator=(const BackendComms&) = delete;
 
+        ~BackendComms() = delete;
+
+        BackendComms(const BackendComms &) = delete;
+
+        BackendComms &operator=(const BackendComms &) = delete;
+
+    private:
         /**
          * Server file descriptor.
          */
@@ -61,7 +76,7 @@ namespace Backend {
         /**
          * Server socket address.
          */
-        static sockaddr_in ServerSocket;
+        static AddressInfo *ServerSocket;
 
         /**
          * Used to ensure stopListen is ThreadSafe.
@@ -72,21 +87,14 @@ namespace Backend {
          * Used to stop the socket listener.
          */
         static bool stopListen;
-
-        /*
-         * Set up the socket for starting communication with clients.
-         */
-        static bool BuildSocket();
-
-        /*
-         * Attempt to bind the socket.
-         */
-        static sockaddr_in BindSocket();
-
         /**
-         * Main loop for receiving instructions from clients.
+         * Defines the ClientHandle algorithm.
          */
-        static void handleIncomingConnections();
+        static HandleType Handle;
+        /**
+        * Client behavior
+        */
+        static void handleClientConnection(int fd);
     };
 
 } // namespace Backend

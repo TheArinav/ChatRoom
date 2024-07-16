@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ChatApp.dir/src/Classes/Backend/BackendComms.cpp.o.d"
   "CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o"
   "CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.o.d"
+  "CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o"
+  "CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o.d"
   "CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o"
   "CMakeFiles/ChatApp.dir/src/Classes/Backend/RegisteredClient.cpp.o.d"
   "CMakeFiles/ChatApp.dir/src/Classes/Backend/Server.cpp.o"

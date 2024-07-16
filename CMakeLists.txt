@@ -25,7 +25,11 @@ add_executable(ChatApp
         src/Classes/Frontend/Account.h
         src/Classes/GeneralTypes/ClientAction.cpp
         src/Classes/GeneralTypes/ClientAction.h
-        src/IO/Terminal.cpp src/IO/Terminal.h src/IO/InstructionInterpreter.cpp src/IO/InstructionInterpreter.h)
+        src/IO/Terminal.cpp src/IO/Terminal.h
+        src/IO/InstructionInterpreter.cpp
+        src/IO/InstructionInterpreter.h
+        src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp
+        src/Classes/Backend/MultiThreadedEnvironment/Communications.h)
 
 find_package(Threads REQUIRED)
 target_link_libraries(ChatApp PRIVATE Threads::Threads pthread)

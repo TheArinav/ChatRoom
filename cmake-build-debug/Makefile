@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/ChatRoom
+CMAKE_SOURCE_DIR = /tmp/tmp.Deqbg4Y2sX/ChatRoom
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/ChatRoom/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/ChatRoom/cmake-build-debug/CMakeFiles /tmp/ChatRoom/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/ChatRoom/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.Deqbg4Y2sX/ChatRoom/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,30 @@ src/Classes/Backend/ChatRoomHost.s: src/Classes/Backend/ChatRoomHost.cpp.s
 src/Classes/Backend/ChatRoomHost.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/ChatRoomHost.cpp.s
 .PHONY : src/Classes/Backend/ChatRoomHost.cpp.s
+
+src/Classes/Backend/MultiThreadedEnvironment/Communications.o: src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o
+.PHONY : src/Classes/Backend/MultiThreadedEnvironment/Communications.o
+
+# target to build an object file
+src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o
+.PHONY : src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.o
+
+src/Classes/Backend/MultiThreadedEnvironment/Communications.i: src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.i
+.PHONY : src/Classes/Backend/MultiThreadedEnvironment/Communications.i
+
+# target to preprocess a source file
+src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.i
+.PHONY : src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.i
+
+src/Classes/Backend/MultiThreadedEnvironment/Communications.s: src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.s
+.PHONY : src/Classes/Backend/MultiThreadedEnvironment/Communications.s
+
+# target to generate assembly for a file
+src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChatApp.dir/build.make CMakeFiles/ChatApp.dir/src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.s
+.PHONY : src/Classes/Backend/MultiThreadedEnvironment/Communications.cpp.s
 
 src/Classes/Backend/RegisteredClient.o: src/Classes/Backend/RegisteredClient.cpp.o
 .PHONY : src/Classes/Backend/RegisteredClient.o
@@ -432,6 +456,9 @@ help:
 	@echo "... src/Classes/Backend/ChatRoomHost.o"
 	@echo "... src/Classes/Backend/ChatRoomHost.i"
 	@echo "... src/Classes/Backend/ChatRoomHost.s"
+	@echo "... src/Classes/Backend/MultiThreadedEnvironment/Communications.o"
+	@echo "... src/Classes/Backend/MultiThreadedEnvironment/Communications.i"
+	@echo "... src/Classes/Backend/MultiThreadedEnvironment/Communications.s"
 	@echo "... src/Classes/Backend/RegisteredClient.o"
 	@echo "... src/Classes/Backend/RegisteredClient.i"
 	@echo "... src/Classes/Backend/RegisteredClient.s"

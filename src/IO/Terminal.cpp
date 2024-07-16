@@ -50,12 +50,20 @@ namespace IO::Terminal{
                 PrintLogo();
                 continue;
             }
-
+            auto inst = Instruction{};
             try {
-                auto inst = InstructionInterpreter::Parse( input);
+                inst = InstructionInterpreter::Parse( input);
             } catch (const std::exception& e) {
                 std::cerr << "Error: " << e.what() << "\n";
+                continue;
             }
+
+
         }
+    }
+
+    void WriteOutput(OutputInfo inf, const string& message) {
+        //Temporary
+        std::cout<< inf.ToString() << message << std::endl;
     }
 }

@@ -64,7 +64,7 @@ namespace GeneralTypes {
         /**
          * Transform a string back into a ClientAction object.
          */
-        static ClientAction Deserialize(string);
+        static ClientAction Deserialize(const string&);
         //endregion
     };
 

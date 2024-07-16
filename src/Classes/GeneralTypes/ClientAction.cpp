@@ -36,7 +36,7 @@ namespace GeneralTypes {
         return ss.str();
     }
 
-    ClientAction ClientAction::Deserialize(string inp) {
+    ClientAction ClientAction::Deserialize(const string& inp) {
         istringstream iss(inp);
         ClientAction res;
         int type;

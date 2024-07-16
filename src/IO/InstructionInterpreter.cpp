@@ -11,6 +11,7 @@ namespace IO {
                 "-1:scx/show-context|",
                 "-1:ecx/exit-context|",
                 "0:s/start|server,client",
+                "1:ss/setup-server|multi-thread,select,epoll",
                 "1:sd/shutdown|",
                 "1:bc/broadcast|-m %s/--message %s",
                 "3:ccr/change-chat-room|-i %i/--roomID %i,-n %s/--roomName %s",
